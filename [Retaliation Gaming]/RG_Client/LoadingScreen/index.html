@@ -1,0 +1,114 @@
+<head>
+		<link type = "text/css" rel = "stylesheet" href = "css/styles.css" />
+		<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet" />
+		<link type = "text/css" rel = "stylesheet" href = "css/materialize.min.css"  media = "screen,projection" />
+		<link type = "text/css" rel = "stylesheet" href = "css/animate.css" />
+		<script src="js/jquery-1.10.2.min.js"></script>
+</head>
+<body class="loaded">
+	<div class="panel" style="margin:-220px -220px;">
+		<img src="images/PrsimRPLogo512Trans.png" width="50%" height="50%"/>	
+		<div id="player">
+			<div id="songTitle">Song Title</div>
+			<div>&nbsp</div>
+			<div>&nbsp</div>		
+			<div id="buttons">
+				<button id="pre" onclick="pre()"><img src="images/Pre.png" height="90%" width="90%"/></button>
+				<button id="play" onclick="playOrPauseSong()"><img src="images/Pause.png"/></button>
+				<button id="next" onclick="next()"><img src="images/Next.png" height="90%" width="90%"/></button>
+			</div>
+			<div class="loader"></div>
+			<div>&nbsp</div>
+			<div>Left Arrow = Previous Song</div>
+			<div>&nbsp</div>
+			<div>Right Arrow = Next Song</div>
+			<div>&nbsp</div>	
+			<div>Space Bar = Play/Pause Song</div>
+		</div>
+	</div>	
+	<div id="particles-js"></div>
+	<script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
+	<script type = "text/javascript" src = "js/jquery.min.js"></script>
+	<script type = "text/javascript" src = "js/materialize.min.js"></script>
+	<script type = "text/javascript" src = "js/material_load.js"></script>
+	<script src="cursor.js"></script>
+</body>
+
+<script type="text/javascript">
+	var songs = ["songs/Baker_Street.mp3","songs/Radio_GaGa.mp3","songs/Tuyo.mp3","songs/White_Lines.mp3",""];
+	var poster = ["images/Poster1.jpg","images/Poster2.jpg","images/Poster3.jpg","images/Poster3.jpg",""];
+	var songTitle = document.getElementById("songTitle");
+	var fillBar = document.getElementById("fill");
+	var song = new Audio();
+	var currentSong = 0;    // it point to the current song
+	var isPaused = false;
+	window.onload = playSong;   // it will call the function playSong when window is load
+	function playSong(){
+		song.src = songs[currentSong];  //set the source of 0th song 
+		songTitle.textContent = songs[currentSong]; // set the title of song
+		song.play();    // play the song
+		songTitle.textContent = songTitle.textContent.slice(6,-4); // Removes the songs/ and the .mp3
+	}
+	function playOrPauseSong(){
+		if(song.paused){
+			song.play();
+			$("#play img").attr("src","images/Pause.png");
+			isPaused = true;
+		}
+		else{
+			song.pause();
+			$("#play img").attr("src","images/Play.png");
+			isPaused = false;
+		}
+	}
+	
+	/* 
+	song.addEventListener('timeupdate',function(){ 
+		var position = song.currentTime / song.duration;
+		fillBar.style.width = position * 100 +'%';
+	}); */
+
+	function next(){
+		currentSong++;
+		if(currentSong > 3){
+			currentSong = 0;
+		}
+		playSong();
+		$("#play img").attr("src","images/Pause.png");
+		$("#image img").attr("src",poster[currentSong]);
+		$("#bg img").attr("src",poster[currentSong]);
+	}
+
+	function pre(){
+		currentSong--;
+		if(currentSong < 0){
+			currentSong = 3;
+		}
+		playSong();
+		$("#play img").attr("src","images/Pause.png");
+		$("#image img").attr("src",poster[currentSong]);
+		$("#bg img").attr("src",poster[currentSong]);
+	}
+
+	document.addEventListener('keydown', function(event) {
+	    if(event.keyCode == 37) {
+	        pre();
+	    }
+	    else if(event.keyCode == 39) {
+	        next();
+	    }
+	    else if(event.keyCode == 32) {
+	    	if (isPaused) {
+	    		isPaused = false;
+	    		song.play();
+				$("#play img").attr("src","images/Pause.png");
+	    	} else {
+	    		isPaused = true;
+	    		song.pause();
+				$("#play img").attr("src","images/Play.png");
+	    	}
+	    }
+	});
+
+</script>

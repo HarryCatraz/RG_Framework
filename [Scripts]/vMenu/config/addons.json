@@ -1,0 +1,49 @@
+{
+  "vehicles": [
+    "FBI3",
+    "FBI4",
+
+    "POLICE5",
+    "POLICE6",
+    "POLICE7",
+    "POLICE8",
+
+    "PoliceR1",
+    "PoliceR2",
+
+    "SASP-Charger",
+    "SASP-CVPI",
+    "SASP-FPI",
+    "SASP-Tahoe",
+    "SASP-Taurus",
+    "SASP-Heli",
+
+    "LSPD_NFS_GS350",
+    "LSPD_NFS_Cayenne",
+
+	  "NorthLSPD-Charger",
+    "NorthLSPD-CVPI",
+	  "NorthLSPD-Heli",
+    "NorthLSPD-Tahoe",
+    "NorthLSPD_FPI",
+    "NorthLSPD_Taurus",
+
+    "Sheriff-Charger",
+    "Sheriff-CVPI",
+	  "Sheriff-Heli",
+    "Sheriff-Tahoe",
+    "Sheriff_FPI",
+    "Sheriff_Taurus"
+
+  ],
+  "peds": [
+  	"SWATRusAssault",
+    "SWATRusEngin",
+    "SWATRusSniper",
+    "SWATUSAssault",
+    "SWATUSEngin",
+    "SWATUSSniper",
+    "SWATUSSupport"
+  ],
+  "weapons": []
+}

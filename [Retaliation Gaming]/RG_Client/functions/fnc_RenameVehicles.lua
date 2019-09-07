@@ -1,0 +1,36 @@
+Citizen.CreateThread(function()
+    AddTextEntry("FBI3", "FBI3")
+    AddTextEntry("FBI4", "FBI4")
+
+    AddTextEntry("POLICE5", "POLICE5")
+    AddTextEntry("POLICE6", "POLICE6")
+    AddTextEntry("POLICE7", "POLICE7")
+    AddTextEntry("POLICE8", "POLICE8")
+
+    AddTextEntry("PoliceR1", "PoliceR1")
+    AddTextEntry("PoliceR2", "PoliceR2")
+
+    AddTextEntry("SASPCharger", "SASPCharger")
+    AddTextEntry("SASPCVPI", "SASPCVPI")
+    AddTextEntry("SASPFPI", "SASPFPI")
+    AddTextEntry("SASPTahoe", "SASPTahoe")
+    AddTextEntry("SASPTaurus", "SASPTaurus")
+    AddTextEntry("SASPHeli", "SASPHeli")
+
+    AddTextEntry("LSPD_NFS_GS350", "LSPD_NFS_GS350")
+    AddTextEntry("LSPD_NFS_Cayenne", "LSPD_NFS_Cayenne")
+
+    AddTextEntry("NorthLSPD-Charger", "NorthLSPD-Charger")
+    AddTextEntry("NorthLSPD-CVPI", "NorthLSPD-CVPI")
+    AddTextEntry("NorthLSPD-Heli", "NorthLSPD-Heli")
+    AddTextEntry("NorthLSPD-Tahoe", "NorthLSPD-Tahoe")
+    AddTextEntry("NorthLSPD-FPI", "NorthLSPD-FPI")
+    AddTextEntry("NorthLSPD-Taurus", "NorthLSPD-Taurus")
+
+    AddTextEntry("Sheriff-Charger", "Sheriff-Charger")
+    AddTextEntry("Sheriff-CVPI", "Sheriff-CVPI")
+    AddTextEntry("Sheriff-Heli", "Sheriff-Heli")
+    AddTextEntry("Sheriff-Tahoe", "Sheriff-Tahoe")
+    AddTextEntry("Sheriff-FPI", "Sheriff-FPI")
+    AddTextEntry("Sheriff-Taurus", "Sheriff-Taurus")
+end)
