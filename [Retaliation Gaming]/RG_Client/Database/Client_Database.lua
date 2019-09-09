@@ -1,16 +1,14 @@
 -- https://i.imgur.com/sTqa0r7.png
 
--- RegisterCommand("sync", function(source, args) 
---     TriggerServerEvent("SVR_doesPlayerInfoExist")
--- end)
-
--- RegisterCommand("get", function(source) 
---     TriggerServerEvent("SVR_getPlayersInfo")
--- end)
-
-RegisterNetEvent('CLT_GetRequest')
-AddEventHandler('CLT_GetRequest', function(id, name, args)
+RegisterNetEvent('RG_Client_SelectRequest')
+AddEventHandler('RG_Client_SelectRequest', function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob)
     Config.ID = id
     Config.Name = name
-    Config.Args = args
+    Config.money = money
+    Config.bank = bank
+    Config.hunger = hunger
+    Config.thirst = thirst
+    Config.pissrelif = pissrelif
+    Config.shitrelif = shitrelif
+    Config.currentJob = currentjob
 end)

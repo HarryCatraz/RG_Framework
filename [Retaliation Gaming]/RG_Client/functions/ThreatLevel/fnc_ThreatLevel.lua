@@ -31,3 +31,25 @@ RegisterNetEvent('Client::getThreat')
 AddEventHandler('Client::getThreat', function(data)
 	threatlevel = data
 end)
+
+
+-- function textThreatLevel(content) 
+--     SetTextFont(1)
+--     SetTextProportional(0)
+--     SetTextScale(0.5,0.5)
+--     SetTextEntry("STRING")
+--     AddTextComponentString("Threat Level: " .. content)
+--     DrawText( 0.0001, 0.0001) -- x,y of the screen
+-- end
+
+-- Citizen.CreateThread(function()
+--     while true do
+--         Citizen.Wait(0)
+--         textThreatLevel(Config.Threatlevel)
+--     end
+-- end)
+
+-- RegisterNetEvent('Client::ChangeThreat')
+-- AddEventHandler('Client::ChangeThreat', function(threat)
+-- 	Config.Threatlevel = threat
+-- end)

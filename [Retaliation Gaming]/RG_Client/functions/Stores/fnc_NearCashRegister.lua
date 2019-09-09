@@ -7,11 +7,11 @@ local registers = {
 
 Citizen.CreateThread(function()
    while true do
-		for a = 1, #props do
+		for a = 1, #registers do
 			local player = PlayerId()
 			local plyPed = GetPlayerPed(player)
 			local plyPos = GetEntityCoords(plyPed, false)
-			local prop = GetClosestObjectOfType(plyPos.x, plyPos.y, plyPos.z, 100.0, GetHashKey(props[a]), 0, 0, 0)
+			local prop = GetClosestObjectOfType(plyPos.x, plyPos.y, plyPos.z, 100.0, GetHashKey(registers[a]), 0, 0, 0)
 			if prop ~= 0 then
                 DrawSpecialText("Press [~g~E~s~] to enter this store")
                 if (IsControlJustPressed(1, 46)) then
