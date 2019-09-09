@@ -18,7 +18,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(Config.syncDelay)
-        TriggerEvent("Client_Database_Bridge_C2S")
+        Wait(Config.syncDelay * 1000)
+        TriggerServerEvent("SVR_doesPlayerInfoExist")
     end
 end)

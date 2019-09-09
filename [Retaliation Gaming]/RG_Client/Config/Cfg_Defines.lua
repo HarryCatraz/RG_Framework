@@ -1,5 +1,9 @@
 Config = {}
 
+Config.ID = id
+Config.Name = name
+Config.Args = args
+
 -- AI Settings --
 Config.AIMultiplier = 0.4
 Config.EnableDispatch = false
