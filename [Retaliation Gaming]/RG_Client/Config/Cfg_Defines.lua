@@ -1,5 +1,6 @@
 Config = {}
 
+-- Init Variables DO NOT TOUCH --
 Config.ID = ""
 Config.Name = ""
 
@@ -45,3 +46,8 @@ Config.VehicleShops {
         {title="Vehicle Shop", colour=1, id=361, x=49.4187, y=2778.793, z=58.043}
     }
 }
+
+-- Spawn Menu Settings --
+Config.SpawnMenuTitle = "Spawn Menu"
+Config.SpawnMenuSubTitle = "Select Your Spawn"
+Config.OpenMenuPromptText = "<b>Press E To Open The Spawn Selection Menu</b>"
