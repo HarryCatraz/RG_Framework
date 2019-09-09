@@ -41,9 +41,7 @@ client_scripts{
 
   'Config/Cfg_Defines.lua',
 
-  'Database/fnc_DB_Init.lua',
-  'Database/fnc_DB_Load.lua',
-  'Database/fnc_DB_Update.lua',
+  'Database/Client_Database.lua',
 
   'Functions/CarWash/fnc_CarWash.lua',
   'Functions/copSystem/fnc_copMarkers.lua',
@@ -57,6 +55,7 @@ client_scripts{
   'Functions/Events/fnc_OnPlayerDisconnected.lua',
   'Functions/Events/fnc_OnPlayerKilled.lua',
   'Functions/Events/KeyHandler.lua',
+  'Functions/Events/fnc_Output.lua',
 
   'Functions/jobSystem/Security/fnc_JS_startSecurity.lua',
   'Functions/jobSystem/Taxi/fnc_JS_startTaxi.lua',
@@ -149,3 +148,7 @@ files{
 }
 
 loadscreen 'LoadingScreen/index.html'
+
+dependency {
+  'RG_Server'
+}

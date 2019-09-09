@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "F:\\Retaliation_Gaming_FiveM\\cfx-server-data-master\\resources\\[Retaliation Gaming]"
+		}
+	],
+	"settings": {
+		"emeraldwalk.runonsave": {
+			"commands": [
+				{
+					"match": "\\.lua$",
+					"cmd": "restart RG_Client",
+				}
+			]
+		}
+	}
+}

@@ -1,10 +1,9 @@
 description 'Retaliation Gaming Server Side Framework'
 
 server_scripts{
-  '@mysql-async/lib/MySQL.lua',
+  "@mysql-async/lib/MySQL.lua",
 
-  'Database/Database_Functions.lua',
-  'Database/Database_Commands.lua',
+  'Database/Server_Database.lua',
 
   'Functions/ChatCommands/ChatCommandHandler.lua',
 
@@ -18,4 +17,8 @@ server_scripts{
   'Functions/svr_fnc_afkkick.lua',
   'Functions/svr_fnc_EmergencyLightControl.lua'
 
+}
+
+dependency {
+  'RG_Client'
 }

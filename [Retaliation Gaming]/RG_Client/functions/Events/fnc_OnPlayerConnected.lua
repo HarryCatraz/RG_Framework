@@ -15,3 +15,10 @@ Citizen.CreateThread(function()
         end
     end
 end)
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(Config.syncDelay)
+        TriggerEvent("Client_Database_Bridge_C2S")
+    end
+end)

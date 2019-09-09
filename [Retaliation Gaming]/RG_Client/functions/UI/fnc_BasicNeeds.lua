@@ -20,17 +20,17 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		if Config.hunger == 100 then
-			RG_Alert("You need some food!")
+			RG_Notify("You need some food!")
 		end
 		if Config.thirst == 100 then
-			RG_Alert("You need a drink!")
+			RG_Notify("You need a drink!")
 		end
 		if Config.hunger > 119 then
-		    RG_Alert("You have passed out (Hunger)!")
+		    RG_Notify("You have passed out (Hunger)!")
 			passout()
 		end
 		if Config.thirst > 119 then
-		    RG_Alert("You have passed out (Thirst)!")
+		    RG_Notify("You have passed out (Thirst)!")
 			passout()
 		end
 	end
@@ -49,14 +49,14 @@ end)
 
 function handle_eat()
 	-- Add Anim here
-	RG_Alert("You have eaten some food!")
+	RG_Notify("You have eaten some food!")
 	Config.hunger = 0
 	return
 end
 
 function handle_drink()
 	-- Add Anim here
-	RG_Alert("You have had a drink!")
+	RG_Notify("You have had a drink!")
 	Config.thirst = 0
 	return
 end

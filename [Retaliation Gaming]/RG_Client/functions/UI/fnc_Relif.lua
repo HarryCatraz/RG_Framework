@@ -20,17 +20,17 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		if Config.pissrelif == 100 then
-			RG_Alert("You need a piss!")
+			RG_Notify("You need a piss!")
 		end
 		if Config.shitrelif == 100 then
-			RG_Alert("You need a shit!")
+			RG_Notify("You need a shit!")
 		end
 		if Config.pissrelif > 119 then
-		    RG_Alert("You have pissed yourself!")
+		    RG_Notify("You have pissed yourself!")
 			handle_piss()
 		end
 		if Config.shitrelif > 119 then
-		    RG_Alert("You have shit yourself!")
+		    RG_Notify("You have shit yourself!")
 			handle_shit()
 		end
 	end
@@ -52,7 +52,7 @@ function handle_shit()
     if not IsEntityPlayingAnim(ped, "switch@trevor@on_toilet", "trev_on_toilet_exit", 3) then
         TaskPlayAnim(ped, "switch@trevor@on_toilet", "trev_on_toilet_exit", 8.0, -8, -1, 49, 0, 0, 0, 0)
         SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
-		RG_Alert("You have taken a Shit!")
+		RG_Notify("You have taken a Shit!")
         Wait(8000)
         ClearPedTasksImmediately(ped)
     end
@@ -65,7 +65,7 @@ function handle_piss()
     if not IsEntityPlayingAnim(ped, "missbigscore1switch_trevor_piss", "piss_loop", 3) then
         TaskPlayAnim(ped, "missbigscore1switch_trevor_piss", "piss_loop", 8.0, -8, -1, 49, 0, 0, 0, 0)
         SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
-		RG_Alert("You have taken a piss!")
+		RG_Notify("You have taken a piss!")
         Wait(8000)
         ClearPedTasksImmediately(ped)
     end
