@@ -1,4 +1,4 @@
-local maxDistance = 15.0
+--[[ local maxDistance = 15.0
 local interactDistance = 3.0
 local markersTable = {
     {X = 454.37634277344,Y = -991.6259765625,Z = 30.689609527588, markertype = garage}
@@ -25,4 +25,4 @@ Citizen.CreateThread(function()
             end
         end
     end
-end)
+end) ]]
