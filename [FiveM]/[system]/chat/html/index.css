@@ -1,20 +1,15 @@
-.color-0{color: #fff;}
-.color-1{color: #930000;}
-.color-2{color: #56aa01;}
-.color-3{color: #d38d00;}
-.color-4{color: #4286f4;}
-.color-5{color: #1b71fc;}
-.color-6{color: #7800b5;}
-.color-8{color: #a00000;}
-.color-9{color: #af007b;}
-
-@font-face {
-    font-family: 'PriceDown'; /*a name to be used later*/
-    src: url('pricedown.ttf'); /*URL to font*/
-}
+.color-0{color: #ffffff;}
+.color-1{color: #ff4444;}
+.color-2{color: #99cc00;}
+.color-3{color: #ffbb33;}
+.color-4{color: #0099cc;}
+.color-5{color: #33b5e5;}
+.color-6{color: #aa66cc;}
+.color-8{color: #cc0000;}
+.color-9{color: #cc0068;}
 
 * {
-  font-family: 'agency FB' ,'Lato';
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -28,21 +23,20 @@ em {
 }
 
 #app {
-  font-family: 'agency FB' ,'Lato';
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
-  background-color: rgba(33, 33, 33, 0);
 }
 
 .chat-window {
   position: absolute;
-  top: 550px;
-  left: 15px;
+  top: 1.5%;
+  left: 0.8%;
   width: 38%;
-  height: 240px;
-  background-color: rgba(33, 33, 33, 0);
-  animation-duration: 2s;
+  height: 22%;
+  max-width: 1000px;
+  background-color: rgba(52, 73, 94, 0.7);
   -webkit-animation-duration: 2s;
 }
 
@@ -50,80 +44,84 @@ em {
 .chat-messages {
   position: relative;
   height: 95%;
-  font-size: 1.2rem;
-  margin: 10px;
+  font-size: 1.8vh;
+  margin: 1%;
 
   overflow-x: hidden;
   overflow-y: hidden;
-  /* background-color: rgba(33, 33, 33, 0.7); */
 }
 
 
 .chat-input {
-  font-size: 1.2rem;
+  font-size: 1.65vh;
   position: absolute;
 
-  top: 257px;
-  left: 15px;
+  top: 23.8%;
+  left: 0.8%;
   width: 38%;
-
+  max-width: 1000px;
   box-sizing: border-box;
 }
 
 .prefix {
+  font-size: 1.8vh;
   position: absolute;
-  margin-top: 2px;
-  left: 4px;
+  margin-top: 0.5%;
+  left: 0.208%;
 }
 
 textarea {
-  font-size: 1.1rem;
+  font-size: 1.65vh;
   display: block;
   box-sizing: border-box;
-  padding: 5px;
-  padding-left: 27px;
+  padding: 1%;
+  padding-left: 3.5%;
   color: white;
-  background-color: rgba(33, 33, 33, 0);
+  background-color: rgba(44, 62, 80, 1.0);
   width: 100%;
   border-width: 0;
-  height: 34px;
+  height: 3.15%;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 textarea:focus, input:focus {
     outline: none;
-    background-color: rgba(33, 33, 33, 0);
 }
 
 .msg {
-  margin-bottom: 3px;
+  margin-bottom: 0.28%;
 }
 
 .multiline {
-  margin-left: 1.5rem;
-  text-indent: -1.5rem;
+  margin-left: 4%;
+  text-indent: -1.2rem;
   white-space: pre-line;
 }
 
 .suggestions {
   list-style-type: none;
-  padding: 5px;
-  padding-left: 27px;
-  font-size: 1.1rem;
+  padding: 0.5%;
+  padding-left: 1.4%;
+  font-size: 1.65vh;
   box-sizing: border-box;
   color: white;
-  background-color: rgba(33, 33, 33, 0);
+  background-color: rgba(44, 62, 80, 1.0);
   width: 100%;
 }
 
 .help {
-  color: #7ca8af;
+  color: #b0bbbd;
 }
 
 .disabled {
-  color: #7ca8af;
+  color: #b0bbbd;
 }
 
 .suggestion {
-  margin-bottom: 5px;
+  margin-bottom: 0.5%;
+}
+
+.hidden {
+  display: none;
 }
