@@ -13,6 +13,7 @@ Config.EnableDispatch = false
 
 -- Job Settings --
 Config.currentJob = "Unemployed"
+Config.copWhitelisting = 0
 
 -- Database Settings --
 Config.syncDelay = 300 --5 Minutes

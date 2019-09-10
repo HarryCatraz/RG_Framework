@@ -1,7 +1,4 @@
 Citizen.CreateThread(function()
-
-    -- Call Cop SQL to get if is cop
-
     local stations = 
     {
         {-445.202, 6014.36, 31.7164},
@@ -16,23 +13,20 @@ Citizen.CreateThread(function()
     }
     while true do 
         Citizen.Wait(0)
-        for i = 1, #stations do
-            stationsCoords = stations[i]
-            if (GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), stationsCoords[1], stationsCoords[2], stationsCoords[3], true ) < 20) then
-                if(IsControlJustPressed(1, 46)) then
-                    if (Config.currentJob == "Cop") then
-                            SetTextComponentFormat("STRING")
-                            AddTextComponentString("You've gone off duty")
-                            DisplayHelpTextFromStringLabel(0, 0, 1, -1)
-                            DrawNotification(false, true)
-                            Config.currentJob = "Unemployed"
-                    else
-                            SetPedArmour(GetPlayerPed(-1), 100)
-                            SetTextComponentFormat("STRING")
-                            AddTextComponentString("You are now on duty")
-                            DisplayHelpTextFromStringLabel(0, 0, 1, -1)
-                            DrawNotification(false, true)
-                            Config.currentJob = "Cop"
+        if (Config.copWhitelisting == 1) then
+            for i = 1, #stations do
+                stationsCoords = stations[i]
+                if (GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), stationsCoords[1], stationsCoords[2], stationsCoords[3], true ) < 3) then
+                    RG_Notify("Press ~b~E~w~ to go on duty")
+                    if(IsControlJustPressed(1, 46)) then
+                        if (Config.currentJob == "Cop") then
+                                RG_Notify("You've gone off duty")
+                                Config.currentJob = "Unemployed"
+                        else
+                                SetPedArmour(GetPlayerPed(-1), 100)
+                                RG_Notify("You've gone on duty")
+                                Config.currentJob = "Cop"
+                        end
                     end
                 end
             end
