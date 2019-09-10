@@ -1,79 +1,58 @@
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("Spawn Menu", "Select Your Spawn") -- Change to config vars
+mainMenu = NativeUI.CreateMenu("Spawn Menu", "~s~Select Your Spawn", "", "", "shopui_title_exec_vechupgrade", "shopui_title_exec_vechupgrade")
 _menuPool:Add(mainMenu)
 
-function Grapeseed(menu) 
-    local click1 = NativeUI.CreateItem("Grapeseed", "~g~Spawn Grapeseed")
-    menu:AddItem(click1)
-    menu.OnItemSelect = function(sender,item1, index)
-        if item1 == click1 then
+_menuPool:ControlDisablingEnabled(false)
+_menuPool:MouseControlsEnabled(false)
+
+function ShowNotification(text)
+    SetNotificationTextEntry("STRING")
+    AddTextComponentSubstringPlayerName(text)
+    DrawNotification(false, false)
+end
+
+function AddSpawnMenu(menu)
+	Grapeseed = NativeUI.CreateItem("Grapeseed", "")
+    InternationalAirport = NativeUI.CreateItem("International Airport", "")
+    PaletoBay = NativeUI.CreateItem("Paleto Bay", "")
+    LosSantos = NativeUI.CreateItem("Los Santos", "")
+    SandyShores = NativeUI.CreateItem("Sandy Shores", "")
+
+    menu:AddItem(Grapeseed)
+    menu:AddItem(InternationalAirport)
+    menu:AddItem(PaletoBay)
+    menu:AddItem(LosSantos)
+    menu:AddItem(SandyShores)
+
+    menu.OnItemSelect = function(sender, item, index)
+        if item == Grapeseed then
             SetEntityCoords(GetPlayerPed(-1), 1697.0, 4833.0, 42, 0, 0, 0, 0)
             mainMenu:Visible(not mainMenu:Visible())
-        end
-    end
-end
-
-function Grapeseed(menu) 
-    local click2 = NativeUI.CreateItem("Grapeseed", "~g~Spawn Grapeseed")
-    menu:AddItem(click2)
-    menu.OnItemSelect = function(sender, item2, index)
-        if item2 == click2 then
-            SetEntityCoords(GetPlayerPed(-1), 1697.0, 4833.0, 42.0, 0, 0, 0, 0)
-            mainMenu:Visible(not mainMenu:Visible())
-        end
-    end
-end
-
-function InternationalAirport(menu) 
-    local click3 = NativeUI.CreateItem("International Airport", "~g~Spawn LSIA")
-    menu:AddItem(click3)
-    menu.OnItemSelect = function(sender, item3, index)
-        if item3 == click3 then
-            SetEntityCoords(GetPlayerPed(-1), -1037.82, -2738.0, 13.8, 0, 0, 0, 0)
-            mainMenu:Visible(not mainMenu:Visible())
-        end
-    end
-end
-
-function PaletoBay(menu) 
-    local click4 = NativeUI.CreateItem("Paleto Bay", "~g~Spawn Paleto Bay Motel")
-    menu:AddItem(click4)
-    menu.OnItemSelect = function(sender, item4, index)
-        if item4 == click4 then
+        elseif item == InternationalAirport then
+                SetEntityCoords(GetPlayerPed(-1), -1037.82, -2738.0, 13.8, 0, 0, 0, 0)
+                mainMenu:Visible(not mainMenu:Visible())
+        elseif item == PaletoBay then
             SetEntityCoords(GetPlayerPed(-1), -90.0, 6313.0, 31.0, 0, 0, 0, 0)
             mainMenu:Visible(not mainMenu:Visible())
-        end
-    end
-end
-
-function LosSantos(menu) 
-    local click5 = NativeUI.CreateItem("Los Santos", "~g~Spawn Los Santos City Center")
-    menu:AddItem(click5)
-    menu.OnItemSelect = function(sender, item5, index)
-        if item5 == click5 then
+        elseif item == LosSantos then
+            SetEntityCoords(GetPlayerPed(-1), -267.0, -960.0, 31.0, 0, 0, 0, 0)
+            mainMenu:Visible(not mainMenu:Visible())
+        elseif item == SandyShores then
             SetEntityCoords(GetPlayerPed(-1), 1827.0, 3693.0, 34.0, 0, 0, 0, 0)
             mainMenu:Visible(not mainMenu:Visible())
         end
-    end
+    end   
 end
 
-function SandyShores(menu) 
-    local click6 = NativeUI.CreateItem("Sandy Shores", "~g~Spawn Sandy Shores")
-    menu:AddItem(click6)
-    menu.OnItemSelect = function(sender, item6, index)
-        if item6 == click6 then
-            SetEntityCoords(GetPlayerPed(-1), -267.0, -960.0, 31.0, 0, 0, 0, 0)
-            mainMenu:Visible(not mainMenu:Visible())
-        end
-    end
-end
-
-Grapeseed(mainMenu)
-InternationalAirport(mainMenu)
-PaletoBay(mainMenu)
-LosSantos(mainMenu)
-SandyShores(mainMenu)
+AddSpawnMenu(mainMenu)
 _menuPool:RefreshIndex()
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(1)
+		_menuPool:ProcessMenus()
+	end
+end)
 
 Citizen.CreateThread(function()
     local ped = GetPlayerPed(-1)
@@ -81,11 +60,10 @@ Citizen.CreateThread(function()
     local maxDistance = 15.0
     while true do
     Citizen.Wait(0)
-    _menuPool:ProcessMenus()
-    local distance = Vdist(pedX, pedY, pedZ, 3153.8312988281, 1281.2443847656, 3.423659324646)
+    local distance = Vdist(pedX, pedY, pedZ, 3153.9, 1281.33, 3.17)
         if distance <= maxDistance then
             SetNotificationTextEntry("STRING")
-            AddTextComponentString(Config.OpenMenuPromptText)
+            AddTextComponentString("You are in the Debug Zone - Press ~b~E~w~ to open the spawn menu")
             DrawNotification(true, false)
             if IsControlJustPressed(0, 38) then
                 mainMenu:Visible(not mainMenu:Visible())

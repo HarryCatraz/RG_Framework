@@ -1,7 +1,9 @@
 description 'Retaliation Gaming Server Side Framework'
 
 server_scripts{
-  "@mysql-async/lib/MySQL.lua",
+  '@mysql-async/lib/MySQL.lua',
+
+  'Functions/Steam/svr_fnc_SteamHexToID.lua',
 
   'Database/Server_Database.lua',
 
