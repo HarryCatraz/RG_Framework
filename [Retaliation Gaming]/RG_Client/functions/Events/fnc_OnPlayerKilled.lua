@@ -35,3 +35,14 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+
+AddEventHandler("baseevents:onPlayerKilled", function(player)
+	Config.bank = 0
+	Config.hunger = 0
+	Config.money = 0
+	Config.pissrelif = 0
+	Config.shitrelif = 0
+	Config.thirst = 0
+    SetEntityCoords(GetPlayerPed(-1), 3153.9, 1281.33, 3.17, 0, 0, 0, 0)
+    mainMenu:Visible(not mainMenu:Visible())
+end)

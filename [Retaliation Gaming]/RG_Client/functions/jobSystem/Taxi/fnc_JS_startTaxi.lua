@@ -16,6 +16,6 @@ AddEventHandler("startTaxi", function()
 
     while (true) do
         Wait(Config.paycheckDelay)
-        Config.life_bank = Config.life_bank + 1500
+        Config.bank = Config.bank + 1500
     end
 end)

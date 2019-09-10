@@ -55,16 +55,12 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-    local ped = GetPlayerPed(-1)
-    local pedX, pedY, pedZ = table.unpack(GetEntityCoords(ped, true))
-    local maxDistance = 15.0
+    local pedX, pedY, pedZ = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
     while true do
-    Citizen.Wait(0)
-    local distance = Vdist(pedX, pedY, pedZ, 3153.9, 1281.33, 3.17)
-        if distance <= maxDistance then
-            SetNotificationTextEntry("STRING")
-            AddTextComponentString("You are in the Debug Zone - Press ~b~E~w~ to open the spawn menu")
-            DrawNotification(true, false)
+        Citizen.Wait(0)
+        local distance = Vdist(pedX, pedY, pedZ, 3153.9, 1281.33, 3.17)
+        if distance <= 3.0 then
+            RG_Notify("You are in the Debug Zone - Press ~b~E~w~ to open the spawn menu")
             if IsControlJustPressed(0, 38) then
                 mainMenu:Visible(not mainMenu:Visible())
             end
