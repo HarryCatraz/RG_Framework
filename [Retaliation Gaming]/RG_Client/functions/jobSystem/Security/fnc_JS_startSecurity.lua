@@ -37,9 +37,7 @@ AddEventHandler("startSecurity", function()
     end
     SetPlayerModel(GetPlayerPed(-1), GetHashKey("s_m_m_security_01"))
 
-    SetNotificationTextEntry("STRING")
-    AddTextComponentString("<b>Job System: You have started a security job.</b>")
-    DrawNotification(true, false)
+    RG_Notify("<b>Job System: You have started a security job.</b>")
 
     GiveWeaponToPed(GetPlayerPed(-1), GetHashKey(WEAPON_FLASHLIGHT), 60, false, false)
     GiveWeaponToPed(GetPlayerPed(-1), GetHashKey(WEAPON_NIGHTSTICK), 60, false, false)

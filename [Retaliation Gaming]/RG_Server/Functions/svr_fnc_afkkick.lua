@@ -1,4 +1,4 @@
 RegisterServerEvent("CATRAZAFKKICK")
 AddEventHandler("CATRAZAFKKICK", function()
-	DropPlayer(source, "Catraz RP: You've Been Kicked By The Server")
+	DropPlayer(source, "Retaliation Gaming: You've Been Kicked By The Server Due To Inactivity")
 end)

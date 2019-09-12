@@ -1,10 +1,8 @@
 resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
-resource_manifest_version '05cfa83c-a124-4cfa-a768-c24a5811d8f9'
 
 description 'Retaliation Gaming Client Side Framework'
 
 client_scripts{  
-  '@NativeUI/NativeUI.lua',
 
   '@mysql-async/lib/MySQL.lua',
 
@@ -12,18 +10,18 @@ client_scripts{
 
   'Database/Client_Database.lua',
 
+  'Functions/Actions/Crouch.lua',
+  'Functions/Actions/Surrender.lua',
+
   'Functions/CarWash/fnc_CarWash.lua',
   'Functions/copSystem/fnc_copMarkers.lua',
   'Functions/copSystem/fnc_CopToggleDuty.lua',
   'Functions/copSystem/fnc_LEOMenu.lua',
   'Functions/copSystem/fnc_SpeedRadar.lua',
 
-  'Functions/Economy/HandleMoney.lua',
-
   'Functions/Events/fnc_OnPlayerConnected.lua',
   'Functions/Events/fnc_OnPlayerDisconnected.lua',
   'Functions/Events/fnc_OnPlayerKilled.lua',
-  'Functions/Events/KeyHandler.lua',
   'Functions/Events/fnc_Output.lua',
 
   'Functions/jobSystem/Security/fnc_JS_startSecurity.lua',
@@ -50,7 +48,6 @@ client_scripts{
   'Functions/UI/fnc_UnderwaterHUD.lua',
   'Functions/UI/MenuText.lua',
   'Functions/UI/RemoveElements.lua',
-  'Functions/UI/fnc_SpawnSelection.lua',
 
   'Functions/vehicleShops/fnc_VehicleShops.lua',
   
@@ -119,6 +116,5 @@ files{
 loadscreen 'LoadingScreen/index.html'
 
 dependency {
-  'RG_Server',
-  'NativeUI'
+  'RG_Server'
 }

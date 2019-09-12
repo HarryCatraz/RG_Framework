@@ -5,12 +5,6 @@ _menuPool:Add(mainMenu)
 _menuPool:ControlDisablingEnabled(false)
 _menuPool:MouseControlsEnabled(false)
 
-function ShowNotification(text)
-    SetNotificationTextEntry("STRING")
-    AddTextComponentSubstringPlayerName(text)
-    DrawNotification(false, false)
-end
-
 function AddSpawnMenu(menu)
 	Grapeseed = NativeUI.CreateItem("Grapeseed", "")
     InternationalAirport = NativeUI.CreateItem("International Airport", "")

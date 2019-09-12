@@ -52,3 +52,12 @@ Config.VehicleShops {
 Config.SpawnMenuTitle = "Spawn Menu"
 Config.SpawnMenuSubTitle = "Select Your Spawn"
 Config.OpenMenuPromptText = "<b>Press E To Open The Spawn Selection Menu</b>"
+
+-- Police System Settings -- 
+
+Config.PoliceStations = {
+    {
+        ['ToggleDutyPoints'] = { ['x'] = 440.05, ['y'] = -975.66, ['z'] = 30.70},
+        -- Add all PDs here
+    }
+}

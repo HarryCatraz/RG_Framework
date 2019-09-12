@@ -4,13 +4,12 @@ local TaxiLocations = {
 
 RegisterNetEvent("startTaxi")
 AddEventHandler("startTaxi", function()
-    SetNotificationTextEntry("STRING")
-    AddTextComponentString("<b>Job System: You have started a taxi job.</b>")
-    DrawNotification(true, false)
 
-    SetNotificationTextEntry("STRING")
-    AddTextComponentString("<b>Taxi Manager: Drive around and find customers to give rides. You'll be paid hourly plus tips.</b>")
-    DrawNotification(true, false)
+    RG_Notify("<b>Job System: You have started a taxi job.</b>")
+
+    Citizen.Wait(3000)
+
+    RG_Notify("<b>Taxi Manager: Drive around and find customers to give rides. You'll be paid hourly plus tips.</b>")
 
     Config.currentJob = "Taxi"
 

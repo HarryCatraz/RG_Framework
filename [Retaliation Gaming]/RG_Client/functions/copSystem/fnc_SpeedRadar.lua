@@ -14,8 +14,8 @@ Citizen.CreateThread(function()
             if (GetVehicleClass(GetVehiclePedIsUsing(GetPlayerPed(-1))) == 18) then
                 local pos = GetEntityCoords(GetPlayerPed(-1))
                 local carM = GetClosestVehicle(pos['x'], pos['y'], pos['z'], 50.0,0,70)
-                local herSpeedMph= GetEntitySpeed(carM)*2.236936
-                textTargetSpeed(math.floor(herSpeedMph))
+                local TargetSpeedMph= GetEntitySpeed(carM)*2.236936
+                textTargetSpeed(math.floor(TargetSpeedMph))
             end
         end
     end
