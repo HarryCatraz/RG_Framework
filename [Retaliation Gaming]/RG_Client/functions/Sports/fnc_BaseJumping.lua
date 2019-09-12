@@ -59,9 +59,14 @@ Citizen.CreateThread(function()
                         SetTextEntry_2("STRING")
 						AddTextEntry("BJ_Text",('Press [~g~E~s~] to take a Parachute for $100'))
 					    DisplayHelpTextThisFrame("BJ_Text",false )
-						if IsControlJustPressed(1, 46) then --E
-							-- Remove Money Here
-                            giveParachute()
+						if IsControlJustPressed(0, 38) then --E
+							if Config.money < 100 then
+								RG_Notify("You dont have enough money to purchase a parachute for $100!")
+							else
+								Config.money = Config.money - 100
+								giveParachute()
+								RG_Notify("You hired a parachute for $100")
+							end
                         end
 					end
 			end

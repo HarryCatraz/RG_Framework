@@ -60,8 +60,13 @@ Citizen.CreateThread(function()
                 local playerPed = GetPlayerPed()
                 if IsControlJustPressed(0,51) and IsPedOnFoot(playerPed) then
                     Citizen.Wait(100)  
-                    hash_bike()
-                    -- Remove Money Here
+                    if Config.money < 100 then
+                        RG_Notify("You dont have enough money to hire a bike!")
+                    else
+                        Config.money = Config.money - 100
+                        hash_bike()
+                        RG_Notify("You hired a bike for $100")
+                    end
                 end
             end
         end
