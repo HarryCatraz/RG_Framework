@@ -42,8 +42,8 @@ Config.paycheck = 5000
 Config.recentmajorcrime = false
     
 -- Vehicle Shop Settings --
-Config.VehicleShops {
-    VehicleShopBlips = {
+Config.VehicleShops = {
+    {
         {title="Vehicle Shop", colour=1, id=361, x=49.4187, y=2778.793, z=58.043}
     }
 }
@@ -57,7 +57,7 @@ Config.OpenMenuPromptText = "<b>Press E To Open The Spawn Selection Menu</b>"
 
 Config.PoliceStations = {
     {
-        ['ToggleDutyPoints'] = { ['x'] = 440.05, ['y'] = -975.66, ['z'] = 30.70},
+        ['ToggleDutyPoint'] = { ['x'] = 447.24, ['y'] = -975.55, ['z'] = 30.69}
         -- Add all PDs here
     }
 }

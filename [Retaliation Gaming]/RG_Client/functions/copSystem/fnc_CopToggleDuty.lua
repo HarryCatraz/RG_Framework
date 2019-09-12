@@ -14,12 +14,17 @@ Citizen.CreateThread(function()
                 local ToggleDutyPointZ = Config.PoliceStations[i].ToggleDutyPoint.z
 
                 local dutyDistance = GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ, true)
-                if dutyDistance < 2 then
-                    RG_Notify("Press ~b~E~w~ To Go On Duty")
+                if Config.copWhitelisting == 1 then
+                    if dutyDistance < 4.1 then
 
-                    if IsControlJustPressed(0, 38) then
-                        Config.currentJob = "Cop"
-                        RG_Notify("You have gone on duty")
+                        DrawMarker(27, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0, 125, 125, 255, 0.0, 0.0, 2, false, false, false, false)
+
+                        RG_Notify("Press ~b~E~w~ To Go On Duty")
+
+                        if IsControlJustPressed(0, 38) then
+                            RG_Notify("You have gone off duty")
+                            Config.currentJob = "Cop"
+                        end
                     end
                 end
             end
@@ -30,12 +35,15 @@ Citizen.CreateThread(function()
                 local ToggleDutyPointZ = Config.PoliceStations[i].ToggleDutyPoint.z
 
                 local dutyDistance = GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ, true)
-                if dutyDistance < 2 then
+                if dutyDistance < 4.1 then
+
+                    DrawMarker(27, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 125, 0, 125, 255, 0.0, 0.0, 2, false, false, false, false)
+
                     RG_Notify("Press ~b~E~w~ To Go Off Duty")
 
                     if IsControlJustPressed(0, 38) then
-                        Config.currentJob = "Unemployed"
                         RG_Notify("You have gone off duty")
+                        Config.currentJob = "Unemployed"
                     end
                 end
             end
