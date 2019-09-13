@@ -51,7 +51,9 @@ client_scripts{
 
   'Functions/vehicleShops/fnc_VehicleShops.lua',
   
-  'Functions/Weapons/fnc_GiveWeapon.lua',
+  'Functions/gunShops/fnc_GiveWeapon.lua',
+  'Functions/gunShops/fnc_gunshops.lua',
+
   'Functions/Weapons/fnc_NoWeaponDrops.lua',
 
   'Functions/World/fnc_SetupAI.lua',

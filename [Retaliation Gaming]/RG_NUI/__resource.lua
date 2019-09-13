@@ -9,6 +9,7 @@ client_scripts{
 
   '@RG_Client/Config/Cfg_Defines.lua',
 
+  'Menus/fnc_GunShop.lua',
   'Menus/fnc_LEOMenu.lua',
   'Menus/fnc_SpawnSelection.lua'
 }
