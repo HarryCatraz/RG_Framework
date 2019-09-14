@@ -13,13 +13,14 @@ function AddGunShopMenu(menu)
     end
 
     menu.OnItemSelect = function(sender, item, index)
-    if Config.money < Config.GunShopWeapons.price then
-        RG_Notify("You dont have enough money to purchase this weapon")
-    else
-        Config.money = Config.money - Config.GunShopWeapons.price
-        RG_GiveWeapon(Config.GunShopWeapons.hash, Config.GunShopWeapons.spawnAmmo)
-        RG_Notify("You have bourght a " ..Config.GunShopWeapons.title.. " for " ..Config.GunShopWeapons.price)
-    end  
+        if Config.money < Config.GunShopWeapons.price then
+            RG_Notify("You dont have enough money to purchase this weapon")
+        else
+            Config.money = Config.money - Config.GunShopWeapons.price
+            RG_GiveWeapon(Config.GunShopWeapons.hash, Config.GunShopWeapons.spawnAmmo)
+            RG_Notify("You have bourght a " ..Config.GunShopWeapons.title.. " for " ..Config.GunShopWeapons.price)
+        end  
+    end
 end
 
 AddGunShopMenu(GunMenu)

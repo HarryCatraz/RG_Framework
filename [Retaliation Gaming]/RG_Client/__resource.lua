@@ -14,10 +14,13 @@ client_scripts{
   'Functions/Actions/Surrender.lua',
 
   'Functions/CarWash/fnc_CarWash.lua',
+
   'Functions/copSystem/fnc_copMarkers.lua',
   'Functions/copSystem/fnc_CopToggleDuty.lua',
   'Functions/copSystem/fnc_LEOMenu.lua',
   'Functions/copSystem/fnc_SpeedRadar.lua',
+  'Functions/copSystem/fnc_PanicButton.lua',
+  'Functions/copSystem/fnc_PoliceShield.lua',
 
   'Functions/Events/fnc_OnPlayerConnected.lua',
   'Functions/Events/fnc_OnPlayerDisconnected.lua',
