@@ -20,14 +20,13 @@ Citizen.CreateThread(function()
                         local streetname = GetStreetNameFromHashKey(streethash)
                         TriggerClientEvent('chatMessage', -1, "[911] Bank Robbery In Progress: "..streetname)
                         Config.recentmajorcrime = true
-                        Wait(600) -- Wait 10 Minutes unitl spawning money
-
+                        Wait(Config.BankSpawnMoneyDelay * 60000)
                         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), RobableBankCoords[1], RobableBankCoords[2], RobableBankCoords[3], true ) < 7 then
                             TriggerClientEvent('chatMessage', -1, "[911] The Vault Has Been Opened At "..streetname.." Bank")
                             CreateMoneyPickups(RobableBankCoords[1], RobableBankCoords[2], RobableBankCoords[3], 0,8,0)
-                            TriggerClientEvent("fnc_AddMoneyCash", GetPlayerPed(-1), 100000)
+                            Config.money = Config.money + (math.random(Config.BankRobberyMoneyRange.lower, Config.BankRobberyMoneyRange.higher))
                             TriggerClientEvent('chatMessage', -1, "[911] The Robber Has Fled At "..streetname.." Bank")
-                            Wait(1800) -- Wait 30 Minutes Until Next Major Crime
+                            Wait(Config.MajorCrimeCooldown * 60000)
                             Config.recentmajorcrime = false
                         end
 					end

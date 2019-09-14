@@ -37,10 +37,11 @@ Citizen.CreateThread(function()
                         local streethash = GetStreetNameAtCoord(RobableStoreCoords[1], RobableStoreCoords[2], RobableStoreCoords[3])
                         local streetname = GetStreetNameFromHashKey(streethash)
                         TriggerClientEvent('chatMessage', -1, "[911] Store Robbery In Progress: "..streetname.." Store")
-                        Wait(600) -- Wait 10 Minutes unitl spawning money
+                        Wait(Config.StoreSpawnMoneyDelay * 60000) -- Wait 10 Minutes unitl spawning money
                         if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), RobableStoreCoords[1], RobableStoreCoords[2], RobableStoreCoords[3], true ) < 7 then
                             TriggerClientEvent('chatMessage', -1, "[911] The Cash Register Has Been Opened At "..streetname.." Store")
                             CreateMoneyPickups(RobableStoreCoords[1], RobableStoreCoords[2], RobableStoreCoords[3], 0,8,0)
+                            Config.money = Config.money + (math.random(Config.StoreRobberyMoneyRange.lower, Config.StoreRobberyMoneyRange.higher))
                             TriggerClientEvent("fnc_AddMoneyCash", GetPlayerPed(-1), 20000)
                         else
                             TriggerClientEvent('chatMessage', -1, "[911] The Robber Has Fled At "..streetname.." Store")

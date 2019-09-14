@@ -54,7 +54,6 @@ Config.SpawnMenuSubTitle = "Select Your Spawn"
 Config.OpenMenuPromptText = "<b>Press E To Open The Spawn Selection Menu</b>"
 
 -- Police System Settings -- 
-
 Config.PoliceStations = {
     {
         ['ToggleDutyPoint'] = { ['x'] = 447.24, ['y'] = -975.55, ['z'] = 30.69}
@@ -63,7 +62,6 @@ Config.PoliceStations = {
 }
 
 -- Gun Shop Settings -- 
-
 Config.GunShopLocations = {
     ['Ammunation'] = { ['x'] = 662.1, ['y'] = -935.3, ['z'] = 20.8},
     ['Ammunation'] = { ['x'] = 810.2, ['y'] = -2157.3, ['z'] = 28.6},
@@ -82,3 +80,12 @@ Config.GunShopWeapons = {
     {title="SNS Pistol", "WEAPON_SNSPISTOL", price=0, spawnAmmo = 30},
     {title="Heavy Pistol", "WEAPON_HEAVYPISTOL", price=0, spawnAmmo = 30},
 }
+
+-- Major Crime Settings -- 
+Config.BankSpawnMoneyDelay = 10 -- Minutes
+Config.MajorCrimeCooldown = 30 -- Minutes
+Config.BankRobberyMoneyRange = { lower = 200000, higher = 500000}
+
+-- Robbery Settings --
+Config.StoreSpawnMoneyDelay = 10 -- Minutes
+Config.StoreRobberyMoneyRange = { lower = 20000, higher = 50000}
