@@ -18,7 +18,7 @@ function EnableShield()
     end
     TaskPlayAnim(ped, animDict, animName, 8.0, -8.0, -1, (2 + 16 + 32), 0.0, 0, 0, 0)
     RequestModel(GetHashKey(prop))
-    while not HasModelLoaded(GetHashKey(prop)) d
+    while not HasModelLoaded(GetHashKey(prop)) do
         Citizen.Wait(100)
     end
     local shield = CreateObject(GetHashKey(prop), pedPos.x, pedPos.y, pedPos.z, 1, 1, 1)

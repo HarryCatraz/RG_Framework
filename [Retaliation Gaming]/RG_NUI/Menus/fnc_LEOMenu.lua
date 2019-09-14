@@ -36,7 +36,7 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         _menuPool:ProcessMenus()
-        if Config.currentJob == "Cop") then
+        if Config.currentJob == "Cop" then
             if IsControlJustPressed(0, 38) then
                 LEOMenu:Visible(not LEOMenu:Visible())
             end
