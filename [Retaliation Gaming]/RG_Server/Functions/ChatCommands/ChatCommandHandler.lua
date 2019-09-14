@@ -11,5 +11,5 @@ RegisterCommand("Info", function(source, args, rawCommand)
 end, false)
 
 RegisterCommand("kickme", function(source, args, rawCommand)
-    TriggerServerEvent("CATRAZAFKKICK")	 
+    TriggerServerEvent("CATRAZKICK")	 
 end, false)

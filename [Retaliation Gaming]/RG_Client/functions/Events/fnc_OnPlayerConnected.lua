@@ -26,6 +26,15 @@ Citizen.CreateThread(function()
     end
 end)
 
+Citizen.CreateThread(function()
+    if NetworkIsSessionStarted() then
+        TriggerServerEvent('RG_DB_SelectRequest')
+        Wait(1000)
+        SpawnMenu:Visible(not SpawnMenu:Visible())
+        return
+    end
+end)
+
 RegisterCommand("sync", function(source) 
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SyncRequest', Config.ID, Config.Name, Config.money, Config.bank, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif, Config.currentJob, Config.copWhitelisting)
@@ -34,13 +43,6 @@ RegisterCommand("sync", function(source)
 end)
 
 RegisterCommand("get", function(source) 
-    if NetworkIsSessionStarted() then
-        TriggerServerEvent('RG_DB_SelectRequest')
-        return
-    end
-end)
-
-Citizen.CreateThread(function()
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SelectRequest')
         return

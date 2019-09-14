@@ -10,11 +10,11 @@ Citizen.CreateThread(function()
 			if currentPos == prevPos then
 				if time > 0 then
 					if kickWarning and time == math.ceil(secondsUntilKick / 4) then
-						TriggerEvent("chatMessage", "WARNING", {255, 0, 0}, "Retaliatin Gaming: You will be kicked due to inactivity in " .. time)
+						TriggerEvent("chatMessage", "WARNING", {255, 0, 0}, "Retaliation Gaming: You will be kicked due to inactivity in " .. time)
 					end
 					time = time - 1
 				else
-					TriggerServerEvent("CATRAZAFKKICK")
+					TriggerServerEvent("CATRAZKICK")
 				end
 			else
 				time = secondsUntilKick

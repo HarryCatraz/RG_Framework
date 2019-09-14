@@ -16,7 +16,7 @@ server_scripts{
 
   'Functions/World/svr_fnc_WeatherSync.lua',
 
-  'Functions/svr_fnc_afkkick.lua',
+  'Functions/svr_fnc_kickplayer.lua',
   'Functions/svr_fnc_EmergencyLightControl.lua'
 
 }
