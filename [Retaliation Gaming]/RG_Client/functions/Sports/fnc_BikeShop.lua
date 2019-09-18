@@ -23,23 +23,6 @@ Citizen.CreateThread(function()
   end
 end)
 
-function hash_bike()
-  local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
-  local hash = GetHashKey("tribike2")  
-  local ve =   CreateVehicle(hash,plyCoords, true, false)
-  local ped = GetPlayerPed(-1)
-  
-  RequestModel(hash)
-    while not HasModelLoaded(hash) do
-        RequestModel(hash)
-        Citizen.Wait(0)
-    end
-  
-    if ve then
-        SetPedIntoVehicle(ped, ve, -1)
-    end
-end
-
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
@@ -64,7 +47,9 @@ Citizen.CreateThread(function()
                         RG_Notify("You dont have enough money to hire a bike!")
                     else
                         Config.money = Config.money - 100
-                        hash_bike()
+                        local ped = GetPlayerPed(-1)
+                        local ve =   CreateVehicle("tribike", GetEntityCoords(ped, false), true, false)
+                        SetPedIntoVehicle(ped, ve, -1)
                         RG_Notify("You hired a bike for $100")
                     end
                 end

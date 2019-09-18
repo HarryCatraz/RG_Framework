@@ -1,5 +1,3 @@
-
-
 _menuPool = NativeUI.CreatePool()
 LEOMenu = NativeUI.CreateMenu("Police Menu", "~s~Police Duty Tools", "", "", "shopui_title_exec_vechupgrade", "shopui_title_exec_vechupgrade")
 _menuPool:Add(LEOMenu)

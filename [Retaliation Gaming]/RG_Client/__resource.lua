@@ -121,5 +121,7 @@ files{
 loadscreen 'LoadingScreen/index.html'
 
 dependency {
-  'RG_Server'
-}
+  'RG_Server',
+  'RG_NUI',
+  'NativeUI'
+  }

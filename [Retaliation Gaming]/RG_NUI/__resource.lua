@@ -1,6 +1,6 @@
 resource_manifest_version '05cfa83c-a124-4cfa-a768-c24a5811d8f9'
 
-description 'Retaliation Gaming Client NUI Framework'
+description 'Retaliation Gaming NUI Framework'
 
 client_scripts{  
   '@NativeUI/NativeUI.lua',
@@ -16,5 +16,6 @@ client_scripts{
 
 dependency {
   'RG_Client',
-  'NativeUI'
+  'NativeUI',
+  'RG_Server'
 }

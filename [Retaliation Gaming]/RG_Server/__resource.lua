@@ -22,5 +22,7 @@ server_scripts{
 }
 
 dependency {
-  'RG_Client'
+  'RG_Client',
+  'RG_NUI',
+  'NativeUI'
 }
