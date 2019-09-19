@@ -1,7 +1,7 @@
 -- https://i.imgur.com/sTqa0r7.png
 
 RegisterNetEvent('RG_Client_SelectRequest')
-AddEventHandler('RG_Client_SelectRequest', function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob, copWhitelisting)
+AddEventHandler('RG_Client_SelectRequest', function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob, copWhitelisting, staffWhitelisting)
     Config.ID = id
     Config.Name = name
     Config.money = money
@@ -12,4 +12,5 @@ AddEventHandler('RG_Client_SelectRequest', function(id, name, money, bank, hunge
     Config.shitrelif = shitrelif
     Config.currentJob = currentjob
     Config.copWhitelisting = copWhitelisting
+    Config.staffWhitelisting = staffWhitelisting
 end)

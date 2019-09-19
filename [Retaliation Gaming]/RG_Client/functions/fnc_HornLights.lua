@@ -1,5 +1,5 @@
-RestrictEmer = false -- Only allow the feature for emergency vehicles.
-lightMultiplier = 7.0 -- This is not capped, highly recommended to go above 12.0!
+RestrictEmer = true -- Only allow the feature for emergency vehicles.
+lightMultiplier = 9.0 -- This is not capped, highly recommended to go above 12.0!
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)

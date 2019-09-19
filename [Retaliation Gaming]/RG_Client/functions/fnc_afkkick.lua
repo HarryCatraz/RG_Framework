@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
 					end
 					time = time - 1
 				else
-					TriggerServerEvent("CATRAZKICK")
+					TriggerServerEvent("RG_Server_Kick")
 				end
 			else
 				time = secondsUntilKick

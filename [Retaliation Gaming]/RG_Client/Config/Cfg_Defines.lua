@@ -1,5 +1,16 @@
 Config = {}
 
+-- Anti-Cheat Settings --
+Config.EnableAntiCheat = true -- Anti-Cheat Master
+Config.CheckGodMode = true
+Config.CheckMaxHealth = true
+Config.CheckHealthRegen = true
+Config.CheckUnlimitedAmmo = true
+Config.CheckInvisible = true
+
+-- Admin Settings --
+Config.staffWhitelisting = 0
+
 -- Init Variables DO NOT TOUCH --
 Config.ID = ""
 Config.Name = ""
