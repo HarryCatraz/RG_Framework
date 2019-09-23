@@ -43,7 +43,7 @@ _menuPool:RefreshIndex()
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(1)
+		Citizen.Wait(0)
 		_menuPool:ProcessMenus()
 	end
 end)

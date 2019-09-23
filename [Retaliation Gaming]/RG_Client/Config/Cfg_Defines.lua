@@ -1,56 +1,56 @@
-Config = {}
+Config = {}  -- Master dont touch
 
 -- Anti-Cheat Settings --
 Config.EnableAntiCheat = true -- Anti-Cheat Master
-Config.CheckGodMode = true
-Config.CheckMaxHealth = true
-Config.CheckHealthRegen = true
-Config.CheckUnlimitedAmmo = true
-Config.CheckInvisible = true
+Config.CheckGodMode = true -- Should the Anti Cheat check GodMod?
+Config.CheckMaxHealth = true -- Should the Anti Cheat check the players health
+Config.CheckHealthRegen = true -- Should the Anti Cheat check the players health regen speed
+Config.CheckUnlimitedAmmo = true -- Should the Anti Cheat check check to see if the player has unlimited ammo
+Config.CheckInvisible = true -- Should the Anti Cheat check if the player is invisible
 
 -- Admin Settings --
-Config.staffWhitelisting = 0
+Config.staffWhitelisting = 0 -- Sets the staff whitelisting to 0, will get overridden by the database once the player has synced their data
 
--- Init Variables DO NOT TOUCH --
-Config.ID = ""
-Config.Name = ""
+-- Init Variables --
+Config.ID = "" -- DO NOT TOUCH
+Config.Name = "" -- DO NOT TOUCH
 
 -- Threat Level Settings -- 
-Config.Threatlevel = ""
+Config.Threatlevel = "Green" -- Default Threat Level
 
 -- AI Settings --
-Config.AIMultiplier = 0.4
-Config.EnableDispatch = false
+Config.AIMultiplier = 0.4 -- Amount of AI to spawn, max 1
+Config.EnableDispatch = false -- Enable AI emergency services dispatching to calls
 
 -- Job Settings --
-Config.currentJob = "Unemployed"
-Config.copWhitelisting = 0
+Config.currentJob = "Unemployed" -- Default job, will get overridden by data once the player has synced their data
+Config.copWhitelisting = 0 -- Default cop whitelisting, will get overridden by data once the player has synced their data
 
 -- Database Settings --
-Config.syncDelay = 300 --5 Minutes
+Config.syncDelay = 300 -- 5 Minutes, How often the the players data will get sent to the database
 
 -- Paycheck Settings --
-Config.paycheckDelay = 300 --5 Minutes
+Config.paycheckDelay = 300 --5 Minutes, How long the player waits to get their paycheck
 
 -- Hunger and Thirst Settings --
-Config.BasicNeedsRate = 10 -- 10 Second per %
+Config.BasicNeedsRate = 10 -- 1% every 10 seconds
 Config.EnableBasicNeedsHUD = true -- Enables the Piss and Shit system's HUD
-Config.hunger = 2
-Config.thirst = 2
+Config.hunger = 2 -- Default players hunger, will get overridden by data once the player has synced their data
+Config.thirst = 2 -- Default players thirst, will get overridden by data once the player has synced their data
 
 -- Shit and Piss Settings --
-Config.relifRate = 10 -- 10 Second per %
+Config.relifRate = 10 -- 1% every 10 seconds
 Config.EnableRelifHUD = true -- Enables the Hunger and Thirsts system's HUD
-Config.pissrelif = 2
-Config.shitrelif = 2
+Config.pissrelif = 2 -- Default players Piss Relif, will get overridden by data once the player has synced their data
+Config.shitrelif = 2 -- Default players Shit Relif, will get overridden by data once the player has synced their data
 
 -- Economy Settings --
-Config.money = 5
-Config.bank = 5
-Config.paycheck = 5000
+Config.money = 5 -- Default players money, will get overridden by data once the player has synced their data
+Config.bank = 5 -- Default players bank amount, will get overridden by data once the player has synced their data
+Config.paycheck = 5000 -- Default players paycheck amount, will get overridden by job system
 
 -- Major Crime Settings --
-Config.recentmajorcrime = false
+Config.recentmajorcrime = false -- Has there been a major crime within the last 30 minutes
     
 -- Vehicle Shop Settings --
 Config.VehicleShops = {
@@ -58,11 +58,6 @@ Config.VehicleShops = {
         {title="Vehicle Shop", colour=1, id=361, x=49.4187, y=2778.793, z=58.043}
     }
 }
-
--- Spawn Menu Settings --
-Config.SpawnMenuTitle = "Spawn Menu"
-Config.SpawnMenuSubTitle = "Select Your Spawn"
-Config.OpenMenuPromptText = "<b>Press E To Open The Spawn Selection Menu</b>"
 
 -- Police System Settings -- 
 Config.PoliceStations = {
@@ -93,10 +88,10 @@ Config.GunShopWeapons = {
 }
 
 -- Major Crime Settings -- 
-Config.BankSpawnMoneyDelay = 10 -- Minutes
-Config.MajorCrimeCooldown = 30 -- Minutes
-Config.BankRobberyMoneyRange = { lower = 200000, higher = 500000}
+Config.BankSpawnMoneyDelay = 10 -- How long it takes for the money to spawn at the bank (Minutes)
+Config.MajorCrimeCooldown = 30 -- The cooldown time for a major crime
+Config.BankRobberyMoneyRange = { lower = 200000, higher = 500000} -- Picks random number between the two values for the bank money to spawn
 
 -- Robbery Settings --
-Config.StoreSpawnMoneyDelay = 10 -- Minutes
-Config.StoreRobberyMoneyRange = { lower = 20000, higher = 50000}
+Config.StoreSpawnMoneyDelay = 10 -- How long it takes for the money to spawn at the store robbery (Minutes)
+Config.StoreRobberyMoneyRange = { lower = 20000, higher = 50000} -- Picks random number between the two values for the store money to spawn

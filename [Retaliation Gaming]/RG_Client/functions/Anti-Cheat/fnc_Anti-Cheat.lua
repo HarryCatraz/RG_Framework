@@ -1,6 +1,7 @@
 local playercoords = GetEntityCoords(GetPlayerPed(-1))
 Citizen.CreateThread(function()
     while true do
+    Citizen.Wait(0)
         if Config.EnableAntiCheat then
             if Config.CheckGodMode then
                 if Config.staffWhitelisting ~= 1 then

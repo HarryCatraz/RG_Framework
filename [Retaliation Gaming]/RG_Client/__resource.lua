@@ -6,12 +6,18 @@ client_scripts{
 
   '@mysql-async/lib/MySQL.lua',
 
+  '@RG_NUI/Menus/fnc_GunShop.lua',
+  '@RG_NUI/Menus/fnc_LEOMenu.lua',
+  '@RG_NUI/Menus/fnc_SpawnSelection.lua',
+
   'Config/Cfg_Defines.lua',
 
   'Database/Client_Database.lua',
 
   'Functions/Actions/Crouch.lua',
   'Functions/Actions/Surrender.lua',
+
+  'Functions/Anti-Cheat/fnc_Anti-Cheat.lua',
 
   'Functions/CarWash/fnc_CarWash.lua',
 
