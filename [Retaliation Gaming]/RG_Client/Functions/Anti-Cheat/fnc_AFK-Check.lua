@@ -1,4 +1,3 @@
-secondsUntilKick = 900 -- 15 Minutes
 kickWarning = true
 Citizen.CreateThread(function()
 	while true do
@@ -9,7 +8,7 @@ Citizen.CreateThread(function()
 			currentPos = GetEntityCoords(playerPed, true)
 			if currentPos == prevPos then
 				if time > 0 then
-					if kickWarning and time == math.ceil(secondsUntilKick / 4) then
+					if kickWarning and time == math.ceil(Config.AFKKickTime / 4) then
 						TriggerEvent("chatMessage", "WARNING", {255, 0, 0}, "Retaliation Gaming: You will be kicked due to inactivity in " .. time)
 					end
 					time = time - 1
@@ -17,7 +16,7 @@ Citizen.CreateThread(function()
 					TriggerServerEvent("RG_Server_Kick")
 				end
 			else
-				time = secondsUntilKick
+				time = Config.AFKKickTime
 			end
 			prevPos = currentPos
 		end

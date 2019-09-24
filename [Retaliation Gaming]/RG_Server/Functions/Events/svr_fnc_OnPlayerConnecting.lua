@@ -1,7 +1,8 @@
 local function OnPlayerConnecting()
+    Wait(10000)
     local steamIdentifier = GetPlayerIdentifiers(source)[1]
     if steamIdentifier == nil then
-        DropPlayer(source, "RG: Please Connect To Steam Before Playing")
+        TriggerEvent("RG_Server_Kick")
     else
         return
     end

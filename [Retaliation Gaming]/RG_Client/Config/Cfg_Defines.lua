@@ -7,6 +7,7 @@ Config.CheckMaxHealth = true -- Should the Anti Cheat check the players health
 Config.CheckHealthRegen = true -- Should the Anti Cheat check the players health regen speed
 Config.CheckUnlimitedAmmo = true -- Should the Anti Cheat check check to see if the player has unlimited ammo
 Config.CheckInvisible = true -- Should the Anti Cheat check if the player is invisible
+Config.AFKKickTime = 900 -- Seconds the player is AFK until they are kicked
 
 -- Admin Settings --
 Config.staffWhitelisting = 0 -- Sets the staff whitelisting to 0, will get overridden by the database once the player has synced their data
@@ -95,3 +96,8 @@ Config.BankRobberyMoneyRange = { lower = 200000, higher = 500000} -- Picks rando
 -- Robbery Settings --
 Config.StoreSpawnMoneyDelay = 10 -- How long it takes for the money to spawn at the store robbery (Minutes)
 Config.StoreRobberyMoneyRange = { lower = 20000, higher = 50000} -- Picks random number between the two values for the store money to spawn
+
+-- Vehicle Settings --
+Config.HornLights = true -- Master Toggle for horn lighs
+Config.EmergencyHornLights = true -- Restrict horn lights to emergency vehicles only
+Config.HornLightsStrength = 9.0 -- Horn Lights strength, max is 12.0

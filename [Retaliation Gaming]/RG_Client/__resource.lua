@@ -18,6 +18,7 @@ client_scripts{
   'Functions/Actions/Surrender.lua',
 
   'Functions/Anti-Cheat/fnc_Anti-Cheat.lua',
+  'Functions/Anti-Cheat/fnc_AFK-Check.lua',
 
   'Functions/CarWash/fnc_CarWash.lua',
 
@@ -58,6 +59,11 @@ client_scripts{
   'Functions/UI/MenuText.lua',
   'Functions/UI/RemoveElements.lua',
 
+  'Functions/Vehicles/fnc_EmergencyLightControl.lua',
+  'Functions/Vehicles/fnc_HornLights.lua',
+  'Functions/Vehicles/fnc_NoDriveBy.lua',
+  'Functions/Vehicles/fnc_RenameVehicles.lua',
+
   'Functions/vehicleShops/fnc_VehicleShops.lua',
   
   'Functions/gunShops/fnc_GiveWeapon.lua',
@@ -67,14 +73,7 @@ client_scripts{
 
   'Functions/World/fnc_SetupAI.lua',
   'Functions/World/fnc_WeatherSync.lua',
-  'Functions/World/MapBlips.lua',
-
-  'Functions/fnc_afkkick.lua',
-  'Functions/fnc_EmergencyLightControl.lua',
-  'Functions/fnc_HornLights.lua',
-  'Functions/fnc_LoadMarkers.lua',
-  'Functions/fnc_NoDriveBy.lua',
-  'Functions/fnc_RenameVehicles.lua'
+  'Functions/World/MapBlips.lua'
 
 }
 
