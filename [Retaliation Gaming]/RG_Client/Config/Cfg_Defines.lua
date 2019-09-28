@@ -60,25 +60,30 @@ Config.VehicleShops = {
     }
 }
 
--- Police System Settings -- 
+-- Police System Settings --
 Config.PoliceStations = {
-    {
-        ['ToggleDutyPoint'] = { ['x'] = 447.24, ['y'] = -975.55, ['z'] = 30.69}
-        -- Add all PDs here
-    }
+	{ x = 447.24, y = -975.55, z = 30.69}, -- Mission Row Captains Office
+	{ x = 826.94, y = -1289.42, z=  28.24}, -- La Mesa Police Porch
+	{ x = -448.9, y = 6011.75, z =  31.72}, -- Paleto Station Front Desk
+	{ x = 1852.47, y = 3689.62, z =  34.27}, -- Sandy Shore Station Front Desk
+	{ x = 639.06, y = 1.59, z =  82.79}, -- Vinewood PD Front Doors
+	{ x = -1108.53, y = -845.32, z =  19.32}, -- Vespucci PD Front Doors
+	{ x = 360.63, y = -1584.16, z =  29.29}, -- Rancho PD Front Doors
+	{ x = -561.22, y = -132.86, z =  38.05}, -- Rockford Hills PD Front Doors
+	{ x = 387.02, y = 792.05, z =  187.69} -- Ranger Station Front Doors
 }
 
 -- Gun Shop Settings -- 
 Config.GunShopLocations = {
-    --['Ammunation'] = { ['x'] = 662.1, ['y'] = -935.3, ['z'] = 20.8},
-    --['Ammunation'] = { ['x'] = 810.2, ['y'] = -2157.3, ['z'] = 28.6},
-    --['Ammunation'] = { ['x'] = 1693.4, ['y'] = 3759.5, ['z'] = 33.7},
-    --['Ammunation'] = { ['x'] = -330.2, ['y'] = 6083.8, ['z'] = 30.4},
-    --['Ammunation'] = { ['x'] = 252.3, ['y'] = -50.0, ['z'] = 68.9},
-    ['Ammunation'] = { ['x'] = 22.0, ['y'] = -1107.2, ['z'] = 28.8}
-    --['Ammunation'] = { ['x'] = 2567.6, ['y'] = 294.3, ['z'] = 107.7},
-    --['Ammunation'] = { ['x'] = -1117.5, ['y'] = 2698.6, ['z'] = 17.5},
-    --['Ammunation'] = { ['x'] = 842.4, ['y'] = -1033.4, ['z'] = 27.1},
+    { x  = 662.1, y = -935.3, z = 20.8},
+    { x  = 810.2, y = -2157.3, z = 28.6},
+    { x  = 1693.4, y = 3759.5, z = 33.7},
+    { x  = -330.2, y = 6083.8, z = 30.4},
+    { x  = 252.3, y = -50.0, z = 68.9},
+    { x  = 21.62, y = -1107.48, z = 29.8},
+    { x  = 2567.6, y = 294.3, z = 107.7},
+    { x  = -1117.5, y = 2698.6, z = 17.5},
+    { x  = 842.4, y = -1033.4, z = 27.1}
 }
 
 Config.GunShopWeapons = {
@@ -98,6 +103,6 @@ Config.StoreSpawnMoneyDelay = 10 -- How long it takes for the money to spawn at 
 Config.StoreRobberyMoneyRange = { lower = 20000, higher = 50000} -- Picks random number between the two values for the store money to spawn
 
 -- Vehicle Settings --
-Config.HornLights = true -- Master Toggle for horn lighs
+Config.HornLights = true -- Master Toggle for horn lights
 Config.EmergencyHornLights = true -- Restrict horn lights to emergency vehicles only
-Config.HornLightsStrength = 9.0 -- Horn Lights strength, max is 12.0
+Config.HornLightsStrength = 4.0 -- Horn Lights strength, max is 12.0

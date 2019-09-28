@@ -7,17 +7,13 @@ Citizen.CreateThread(function()
         local playerped = GetPlayerPed(-1)
         local playerCoords =  GetEntityCoords(playerped, true)
 
-        if Config.currentJob == "Unemployed" then
+        if Config.currentJob ~= "Cop" then
             for i = 1, #Config.PoliceStations do
-                local ToggleDutyPointX = Config.PoliceStations[i].ToggleDutyPoint.x
-                local ToggleDutyPointY = Config.PoliceStations[i].ToggleDutyPoint.y
-                local ToggleDutyPointZ = Config.PoliceStations[i].ToggleDutyPoint.z
-
-                local dutyDistance = GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ, true)
+                local dutyDistance = GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, Config.PoliceStations[i].x, Config.PoliceStations[i].y, Config.PoliceStations[i].z, true)
                 if Config.copWhitelisting == 1 then
                     if dutyDistance < 4.1 then
 
-                        DrawMarker(27, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0, 125, 125, 255, 0.0, 0.0, 2, false, false, false, false)
+                        DrawMarker(27, Config.PoliceStations[i].x, Config.PoliceStations[i].y, Config.PoliceStations[i].z-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0, 125, 125, 255, 0.0, 0.0, 2, false, false, false, false)
 
                         RG_Notify("Press ~b~E~w~ To Go On Duty")
 
@@ -30,14 +26,11 @@ Citizen.CreateThread(function()
             end
         elseif Config.currentJob == "Cop" then
             for i = 1, #Config.PoliceStations do
-                local ToggleDutyPointX = Config.PoliceStations[i].ToggleDutyPoint.x
-                local ToggleDutyPointY = Config.PoliceStations[i].ToggleDutyPoint.y
-                local ToggleDutyPointZ = Config.PoliceStations[i].ToggleDutyPoint.z
 
-                local dutyDistance = GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ, true)
+                local dutyDistance = GetDistanceBetweenCoords(playerCoords.x, playerCoords.y, playerCoords.z, Config.PoliceStations[i].x, Config.PoliceStations[i].y, Config.PoliceStations[i].z, true)
                 if dutyDistance < 4.1 then
 
-                    DrawMarker(27, ToggleDutyPointX, ToggleDutyPointY, ToggleDutyPointZ-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 125, 0, 125, 255, 0.0, 0.0, 2, false, false, false, false)
+                    DrawMarker(27, Config.PoliceStations[i].x, Config.PoliceStations[i].y, Config.PoliceStations[i].z-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 125, 0, 125, 255, 0.0, 0.0, 2, false, false, false, false)
 
                     RG_Notify("Press ~b~E~w~ To Go Off Duty")
 
