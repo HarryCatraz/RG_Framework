@@ -63,6 +63,8 @@ client_scripts{
   'Functions/Vehicles/fnc_HornLights.lua',
   'Functions/Vehicles/fnc_NoDriveBy.lua',
   'Functions/Vehicles/fnc_RenameVehicles.lua',
+  'Functions/Vehicles/fnc_loadVehicle.lua',
+  'Functions/Vehicles/fnc_SpawnVehicle.lua',
 
   'Functions/vehicleShops/fnc_VehicleShops.lua',
   

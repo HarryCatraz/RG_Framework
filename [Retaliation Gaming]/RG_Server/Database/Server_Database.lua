@@ -21,7 +21,7 @@ AddEventHandler("RG_DB_SyncRequest", function(id, name, money, bank, hunger, thi
             end
         end)
     else
-        TriggerEvent("RG_Server_Kick")
+        --TriggerEvent("RG_Server_Kick")
     end
 end)
 
@@ -36,6 +36,6 @@ AddEventHandler("RG_DB_SelectRequest", function()
             TriggerClientEvent("RG_Client_SelectRequest", _src, res[1].id, res[1].name, res[1].money, res[1].bank, res[1].hunger, res[1].thirst, res[1].pissrelif, res[1].shitrelif, res[1].currentjob, res[1].copWhitelisting, res[1].staffWhitelisting)
         end)
     else
-        TriggerEvent("RG_Server_Kick")
+        --TriggerEvent("RG_Server_Kick")
     end
 end)

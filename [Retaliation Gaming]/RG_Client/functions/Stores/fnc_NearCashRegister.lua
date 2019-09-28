@@ -11,16 +11,20 @@ Citizen.CreateThread(function()
 			local player = PlayerId()
 			local plyPed = GetPlayerPed(player)
 			local plyPos = GetEntityCoords(plyPed, false)
-			local prop = GetClosestObjectOfType(plyPos.x, plyPos.y, plyPos.z, 100.0, GetHashKey(registers[a]), 0, 0, 0)
-			if prop ~= 0 then
-                DrawSpecialText("Press [~g~E~s~] to enter this store")
-                if (IsControlJustPressed(1, 46)) then
-                    -- Open Store UI
-                end
-                if IsPedArmed(ped, 7) then 
-                    DrawSpecialText("Press [~g~F~s~] to rob this store")
-                    if(IsControlJustPressed(1, 49)) then
-                        RobStore()
+            local prop = GetClosestObjectOfType(plyPos.x, plyPos.y, plyPos.z, 100.0, GetHashKey(registers[a]), 0, 0, 0)
+            local propCoords = GetEntityCoords(prop, false)
+            if prop ~= 0 then
+                local dist = Vdist(plyPos.x, plyPos.y, plyPos.z, propCoords.x, propCoords.y, propCoords.z)
+                if dist <= 2.0 then
+                    DrawSpecialText("Press [~g~E~s~] to enter this store")
+                    if (IsControlJustPressed(1, 46)) then
+                        -- Open Store UI
+                    end
+                    if IsPedArmed(ped, 7) then 
+                        DrawSpecialText("Press [~g~F~s~] to rob this store")
+                        if(IsControlJustPressed(1, 49)) then
+                            RobStore()
+                        end
                     end
                 end
 			end

@@ -9,7 +9,6 @@ local blips = {
 }
 
 Citizen.CreateThread(function()
-
   for _, info in pairs(blips) do
     info.blip = AddBlipForCoord(info.x, info.y, info.z)
     SetBlipSprite(info.blip, info.id)
@@ -46,10 +45,9 @@ Citizen.CreateThread(function()
                     if Config.money < 100 then
                         RG_Notify("You dont have enough money to hire a bike!")
                     else
+                        RG_LoadVehicleModel("tribike")
                         Config.money = Config.money - 100
-                        local ped = GetPlayerPed(-1)
-                        local ve =   CreateVehicle("tribike", GetEntityCoords(ped, false), true, false)
-                        SetPedIntoVehicle(ped, ve, -1)
+                        RG_SpawnVehicle("tribike")
                         RG_Notify("You hired a bike for $100")
                     end
                 end

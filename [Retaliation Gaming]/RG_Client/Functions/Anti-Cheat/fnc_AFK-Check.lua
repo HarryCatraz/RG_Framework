@@ -13,7 +13,7 @@ Citizen.CreateThread(function()
 					end
 					time = time - 1
 				else
-					TriggerServerEvent("RG_Server_Kick")
+					--TriggerServerEvent("RG_Server_Kick")
 				end
 			else
 				time = Config.AFKKickTime

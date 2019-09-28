@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
             if Config.CheckGodMode then
                 if Config.staffWhitelisting ~= 1 then
                     if(GetPlayerInvincible(PlayerId())) then
-                        TriggerServerEvent("RG_Server_Kick")
+                        --TriggerServerEvent("RG_Server_Kick")
                     end
                 end
             end
@@ -16,7 +16,7 @@ Citizen.CreateThread(function()
             if Config.CheckInvisible then
                 if Config.staffWhitelisting ~= 1 then
                     if(not IsEntityVisible(GetPlayerPed(-1))) then
-                        TriggerServerEvent("RG_Server_Kick")
+                        --TriggerServerEvent("RG_Server_Kick")
                     end
                 end
             end  
