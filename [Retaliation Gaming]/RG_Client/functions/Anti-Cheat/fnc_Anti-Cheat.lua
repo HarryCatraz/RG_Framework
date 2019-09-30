@@ -4,10 +4,12 @@ Citizen.CreateThread(function()
     Citizen.Wait(10000)
         if Config.EnableAntiCheat then
             if Config.CheckGodMode then
-                if Config.staffWhitelisting ~= 1 then
-                    if(GetPlayerInvincible(PlayerId())) then
-                        --TriggerServerEvent("RG_Server_Kick")
-                    end
+                if Config.IsInComa == false then
+                    if Config.staffWhitelisting ~= 1 then
+                        if(GetPlayerInvincible(PlayerId())) then
+                            --TriggerServerEvent("RG_Server_Kick")
+                        end
+                    end 
                 end
             end
             if Config.CheckMaxHealth then

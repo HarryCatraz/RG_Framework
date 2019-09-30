@@ -42,7 +42,6 @@ Citizen.CreateThread(function()
                             TriggerClientEvent('chatMessage', -1, "[911] The Cash Register Has Been Opened At "..streetname.." Store")
                             CreateMoneyPickups(RobableStoreCoords[1], RobableStoreCoords[2], RobableStoreCoords[3], 0,8,0)
                             Config.money = Config.money + (math.random(Config.StoreRobberyMoneyRange.lower, Config.StoreRobberyMoneyRange.higher))
-                            TriggerClientEvent("fnc_AddMoneyCash", GetPlayerPed(-1), 20000)
                         else
                             TriggerClientEvent('chatMessage', -1, "[911] The Robber Has Fled At "..streetname.." Store")
                         end

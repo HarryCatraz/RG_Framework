@@ -29,10 +29,10 @@ client_scripts{
   'Functions/copSystem/fnc_PanicButton.lua',
   'Functions/copSystem/fnc_PoliceShield.lua',
 
+  'Functions/Events/fnc_OnPlayerComa.lua',
   'Functions/Events/fnc_OnPlayerConnected.lua',
   'Functions/Events/fnc_OnPlayerDisconnected.lua',
   'Functions/Events/fnc_OnPlayerKilled.lua',
-  'Functions/Events/fnc_Output.lua',
 
   'Functions/jobSystem/Security/fnc_JS_startSecurity.lua',
   'Functions/jobSystem/Taxi/fnc_JS_startTaxi.lua',
@@ -75,6 +75,7 @@ client_scripts{
 
   'Functions/World/fnc_SetupAI.lua',
   'Functions/World/fnc_WeatherSync.lua',
+  'Functions/World/fnc_Hookers.lua',
   'Functions/World/MapBlips.lua'
 
 }

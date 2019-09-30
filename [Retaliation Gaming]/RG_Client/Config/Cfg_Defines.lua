@@ -106,3 +106,16 @@ Config.StoreRobberyMoneyRange = { lower = 20000, higher = 50000} -- Picks random
 Config.HornLights = true -- Master Toggle for horn lights
 Config.EmergencyHornLights = true -- Restrict horn lights to emergency vehicles only
 Config.HornLightsStrength = 4.0 -- Horn Lights strength, max is 12.0
+
+-- Hooker Settings --
+Config.EnableHookers = true
+Config.HookerLocations = {
+    {x = 129.63, y = -1060.41, z = 29.19, heading = 156.4} -- Add Hooker Locations Here
+}
+Config.Hookers = {
+	{id = 1, VoiceName = "HOOKER_LEAVES_ANGRY", modelHash = "s_f_y_hooker_01"}, 
+}
+-- Coma Settings --
+Config.ComaDuration = 5 -- Max Minutes A Player Can Spend In A Coma
+Config.ComaThreshold = 120 -- Health that the player drops below to enter a coma
+Config.IsInComa = false -- Do Not touch

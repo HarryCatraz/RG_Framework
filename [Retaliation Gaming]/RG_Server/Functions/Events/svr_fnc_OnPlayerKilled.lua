@@ -4,10 +4,10 @@ AddEventHandler('playerDied',function(killer,reason)
 		reason = 2
 	end
 	if reason == 0 then
-		TriggerClientEvent('showNotification', -1,"~o~".. GetPlayerName(source).."~w~ Was Killed.")
+		TriggerClientEvent('RG_ShowNotification', -1,"~o~".. GetPlayerName(source).."~w~ Was Killed.")
 	elseif reason == 1 then
-		TriggerClientEvent('showNotification', -1,"~o~".. killer .. "~w~ killed ~o~"..GetPlayerName(source).."~w~.")
+		TriggerClientEvent('RG_ShowNotification', -1,"~o~".. killer .. "~w~ killed ~o~"..GetPlayerName(source).."~w~.")
 	else
-		TriggerClientEvent('showNotification', -1,"~o~".. GetPlayerName(source).."~w~ Was Killed.")
+		TriggerClientEvent('RG_ShowNotification', -1,"~o~".. GetPlayerName(source).."~w~ Was Killed.")
 	end
 end)

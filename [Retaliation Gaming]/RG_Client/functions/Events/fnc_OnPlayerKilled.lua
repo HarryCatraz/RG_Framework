@@ -1,5 +1,5 @@
-RegisterNetEvent('showNotification')
-AddEventHandler('showNotification', function(text)
+RegisterNetEvent('RG_ShowNotification')
+AddEventHandler('RG_ShowNotification', function(text)
 	ShowNotification(text)
 end)
 function ShowNotification(text)
