@@ -1,4 +1,4 @@
-function GetPlayers()
+function RG_GetPlayers()
 	local players = {}
 	for i = 0, 31 do
 		if NetworkIsPlayerActive(i) then
@@ -13,7 +13,7 @@ Citizen.CreateThread(function()
 	local currentPlayer = PlayerId()
 	while true do
 		Wait(100)
-		local players = GetPlayers()
+		local players = RG_GetPlayers()
 		for player = 0, 64 do
             if player ~= currentPlayer and NetworkIsPlayerActive(player) then
                 if (Config.currentJob == "Cop") then

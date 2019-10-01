@@ -10,13 +10,13 @@ Citizen.CreateThread(function()
 	while true do
         Citizen.Wait(0)
         if Config.EnableHookers then
-            for k,v in pairs(locations) do
-                    if GetDistanceBetweenCoords(PlayerCoords, v.pos.x, v.pos.y, v.pos.z, true) < 10.0 then
-                        CurrentLocation = v
-                        break
-                    else
-                        CurrentLocation = nil
-                    end
+            for i = 1, #Config.HookerLocations do
+                if GetDistanceBetweenCoords(PlayerCoords, Config.HookerLocations[i].x, Config.HookerLocations[i].y, Config.HookerLocations[i].z, true) < 10.0 then
+                    CurrentLocation = v
+                    break
+                else
+                    CurrentLocation = nil
+                end
             end
         end
 	end

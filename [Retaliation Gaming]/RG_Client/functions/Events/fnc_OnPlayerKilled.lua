@@ -1,12 +1,8 @@
 RegisterNetEvent('RG_ShowNotification')
 AddEventHandler('RG_ShowNotification', function(text)
-	ShowNotification(text)
+	RG_Notify(text)
 end)
-function ShowNotification(text)
-	SetNotificationTextEntry("STRING")
-	AddTextComponentString(text)
-	DrawNotification(0,1)
-end
+
 Citizen.CreateThread(function()
     -- main loop thing
 	alreadyDead = false
@@ -36,23 +32,13 @@ Citizen.CreateThread(function()
 	end
 end)
 
-Citizen.CreateThread(function()
-    local playerPed = GetPlayerPed(-1)
-	alreadyDead2 = false
-    while true do
-        Citizen.Wait(0)
-		if IsEntityDead(playerPed) and not alreadyDead2 then
-			Config.bank = 0
-			Config.hunger = 0
-			Config.money = 0
-			Config.pissrelif = 0
-			Config.shitrelif = 0
-			Config.thirst = 0
-			SetEntityCoords(playerPed, 3153.9, 1281.33, 3.17, 0, 0, 0, 0)
-			SpawnMenu:Visible(not SpawnMenu:Visible())
-		end
-		if not IsEntityDead(playerPed) then
-			alreadyDead2 = false
-		end
-	end
+AddEventHandler("onPlayerKilled",function(player)
+	Config.bank = 0
+	Config.hunger = 0
+	Config.money = 0
+	Config.pissrelif = 0
+	Config.shitrelif = 0
+	Config.thirst = 0
+	SetEntityCoords(GetPlayerPed(-1), Config.DebugLocationX, Config.DebugLocationY, Config.DebugLocationZ, 0, 0, 0, 0)
+	SpawnMenu:Visible(not SpawnMenu:Visible())
 end)

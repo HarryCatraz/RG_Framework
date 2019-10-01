@@ -1,11 +1,11 @@
 local coma_left = Config.ComaDuration * 60
 local ragdoll = false
 Citizen.CreateThread(function()
-    local ped = GetPlayerPed(-1)
-    local health = GetEntityHealth(ped)
     while true do
         Citizen.Wait(0)
-        if health <= Config.ComaThreshold and Config.IsInComa > 0 then
+        local ped = GetPlayerPed(-1)
+        local health = GetEntityHealth(ped)
+        if health <= (Config.ComaThreshold) and coma_left > 0 then
             if not Config.IsInComa then
                 if IsEntityDead(ped) then
                     local x,y,z = table.unpack(GetEntityCoords(ped,true))
@@ -18,7 +18,7 @@ Citizen.CreateThread(function()
                 if IsPedSittingInAnyVehicle(ped) then
                     local veh = GetVehiclePedIsIn(ped,false)
                     TaskLeaveVehicle(ped, veh, 4160)
-                  end
+                end
                 ragdoll = true
             else
                 if health < Config.ComaThreshold then 
@@ -26,11 +26,11 @@ Citizen.CreateThread(function()
                 end
             end
         else
-            if Config.IsInComa then -- get out of coma state
+            if Config.IsInComa then
                 Config.IsInComa = false
                 SetEntityInvincible(ped,false)
                 ragdoll = false
-                if coma_left <= 0 then -- get out of coma by death
+                if coma_left <= 0 then
                     SetEntityHealth(ped, 0)
                 end
                 Citizen.Wait(5000)
@@ -40,11 +40,20 @@ Citizen.CreateThread(function()
     end
 end)
 
-Citizen.CreateThread(function() -- coma decrease thread
+Citizen.CreateThread(function()
     while true do 
         Citizen.Wait(1000)
         if Config.IsInComa then
             coma_left = coma_left-1
+        end
+    end
+end)
+
+Citizen.CreateThread(function()
+    while true do 
+        Citizen.Wait(10)
+        if ragdoll then
+            SetPedToRagdoll(GetPlayerPed(-1), 1000, 1000, 0, 0, 0, 0)
         end
     end
 end)

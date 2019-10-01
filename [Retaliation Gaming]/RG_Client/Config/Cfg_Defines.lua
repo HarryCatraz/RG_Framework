@@ -119,3 +119,8 @@ Config.Hookers = {
 Config.ComaDuration = 5 -- Max Minutes A Player Can Spend In A Coma
 Config.ComaThreshold = 120 -- Health that the player drops below to enter a coma
 Config.IsInComa = false -- Do Not touch
+
+-- Death Settings --
+Config.DebugLocationX = 3153.9 
+Config.DebugLocationY = 1281.33
+Config.DebugLocationZ = 3.17
