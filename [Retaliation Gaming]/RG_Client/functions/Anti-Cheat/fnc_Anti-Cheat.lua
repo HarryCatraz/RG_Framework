@@ -23,7 +23,11 @@ Citizen.CreateThread(function()
                 end
             end  
             if Config.CheckHealthRegen then
-                SetPlayerHealthRechargeMultiplier(PlayerId(), 1.0)
+                if Config.IsInComa then
+                    SetPlayerHealthRechargeMultiplier(PlayerId(), 0)
+                else
+                    SetPlayerHealthRechargeMultiplier(PlayerId(), 1.0)
+                end
             end
             if Config.CheckUnlimitedAmmo then
                 SetPedInfiniteAmmoClip(GetPlayerPed(-1), 0)
