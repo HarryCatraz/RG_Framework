@@ -30,7 +30,7 @@ Citizen.CreateThread(function()
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SelectRequest')
         Wait(1000)
-        SpawnMenu:Visible(not SpawnMenu:Visible())
+        exp_OpenSpawnMenu()
         return
     end
 end)

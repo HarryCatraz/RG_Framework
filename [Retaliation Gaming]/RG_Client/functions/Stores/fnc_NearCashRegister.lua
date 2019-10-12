@@ -1,17 +1,10 @@
-local registers = {
-    "prop_till_01_dam",
-    "prop_till_02",
-    "prop_till_03",
-    "p_till_01_s"
-}
-
 Citizen.CreateThread(function()
    while true do
-		for a = 1, #registers do
+		for a = 1, #Config.CashRegisters do
 			local player = PlayerId()
 			local plyPed = GetPlayerPed(player)
 			local plyPos = GetEntityCoords(plyPed, false)
-            local prop = GetClosestObjectOfType(plyPos.x, plyPos.y, plyPos.z, 100.0, GetHashKey(registers[a]), 0, 0, 0)
+            local prop = GetClosestObjectOfType(plyPos.x, plyPos.y, plyPos.z, 100.0, GetHashKey(Config.CashRegisters[a]), 0, 0, 0)
             local propCoords = GetEntityCoords(prop, false)
             if prop ~= 0 then
                 local dist = Vdist(plyPos.x, plyPos.y, plyPos.z, propCoords.x, propCoords.y, propCoords.z)

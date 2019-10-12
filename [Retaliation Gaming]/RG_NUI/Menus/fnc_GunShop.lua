@@ -18,7 +18,7 @@ function AddGunShopMenu(menu)
         else
             Config.money = Config.money - Config.GunShopWeapons.price
             RG_GiveWeapon(Config.GunShopWeapons.hash, Config.GunShopWeapons.spawnAmmo)
-            RG_Notify("You have bourght a " ..Config.GunShopWeapons.title.. " for " ..Config.GunShopWeapons.price)
+            RG_Notify("You have bought a " ..Config.GunShopWeapons.title.. " for " ..Config.GunShopWeapons.price)
         end  
     end
 end

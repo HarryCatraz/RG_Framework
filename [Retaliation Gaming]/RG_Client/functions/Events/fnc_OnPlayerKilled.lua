@@ -21,6 +21,7 @@ Citizen.CreateThread(function()
 				TriggerServerEvent('playerDied',0,0)
 			elseif killername then
 				TriggerServerEvent('playerDied',killername,1)
+				RG_CreateEvidence(playerPed, killer, "Murder")
 			else
 				TriggerServerEvent('playerDied',0,2)
 			end

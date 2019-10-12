@@ -9,6 +9,8 @@ client_scripts{
 
   '@RG_Client/Config/Cfg_Defines.lua',
 
+  'Menus/fnc_MenuExports.lua',
+
   'Menus/fnc_GunShop.lua',
   'Menus/fnc_LEOMenu.lua',
   'Menus/fnc_SpawnSelection.lua'
@@ -18,4 +20,10 @@ dependency {
   'RG_Client',
   'NativeUI',
   'RG_Server'
+}
+
+exports {
+  'exp_OpenLEOMenu',
+  'exp_OpenSpawnMenu',
+  'exp_OpenGunShopMenu'
 }

@@ -24,6 +24,7 @@ client_scripts{
 
   'Functions/copSystem/fnc_copMarkers.lua',
   'Functions/copSystem/fnc_CopToggleDuty.lua',
+  'Functions/copSystem/fnc_Evidence.lua',
   'Functions/copSystem/fnc_LEOMenu.lua',
   'Functions/copSystem/fnc_SpeedRadar.lua',
   'Functions/copSystem/fnc_PanicButton.lua',

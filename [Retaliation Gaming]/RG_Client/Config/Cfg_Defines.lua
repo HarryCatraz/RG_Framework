@@ -55,9 +55,7 @@ Config.recentmajorcrime = false -- Has there been a major crime within the last 
     
 -- Vehicle Shop Settings --
 Config.VehicleShops = {
-    {
-        {title="Vehicle Shop", colour=1, id=361, x=49.4187, y=2778.793, z=58.043}
-    }
+    {title="Vehicle Shop", colour=0, id=326, -33.777, y = -1102.021, z = 25.422}
 }
 
 -- Police System Settings --
@@ -156,3 +154,21 @@ Config.IsInComa = false -- Do Not touch
 Config.DebugLocationX = 3153.9 
 Config.DebugLocationY = 1281.33
 Config.DebugLocationZ = 3.17
+
+-- Evidence Settings --
+Config.EvidenceModel = "prop_drug_package"
+Config.EvidenceDeleteDelay = 15 -- Deletes evidence 15 Minutes after spawning
+
+-- Store Settings --
+Config.CashRegisters = {
+    "prop_till_01_dam",
+    "prop_till_02",
+    "prop_till_03",
+    "p_till_01_s"
+}
+
+-- Virtual Items --
+Config.VirtualItems = {
+    { name = "Weed (Plant)", buyprice = 10 , sellprice = 5 , amount = 0}, 
+    { name = "Weed (Processed)", buyprice = 10 , sellprice = 5 , amount = 0}, 
+}
