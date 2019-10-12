@@ -30,14 +30,14 @@ Citizen.CreateThread(function()
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SelectRequest')
         Wait(1000)
-        exp_OpenSpawnMenu()
+        exports['RG_NUI']:exp_OpenSpawnMenu()
         return
     end
 end)
 
 RegisterCommand("sync", function(source) 
     if NetworkIsSessionStarted() then
-        TriggerServerEvent('RG_DB_SyncRequest', Config.ID, Config.Name, Config.money, Config.bank, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif, Config.currentJob, Config.copWhitelisting, Config.medicWhitelisting , Config.staffWhitelisting)
+        TriggerServerEvent('RG_DB_SyncRequest', Config.ID, Config.Name, Config.money, Config.bank, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif, Config.currentJob, Config.copWhitelisting, Config.medicWhitelisting, Config.staffWhitelisting)
         return
     end
 end)

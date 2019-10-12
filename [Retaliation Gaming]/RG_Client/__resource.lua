@@ -39,6 +39,8 @@ client_scripts{
   'Functions/jobSystem/Taxi/fnc_JS_startTaxi.lua',
   'Functions/jobSystem/fnc_JS_Main.lua',
 
+  'Functions/medicSystem/fnc_MedicToggleDuty.lua',
+
   'Functions/Notifications/HandleNotitications.lua',
 
   'Functions/Robberies/fnc_R_RobBank.lua',

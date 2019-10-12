@@ -46,7 +46,7 @@ Citizen.CreateThread(function()
 			Config.shitrelif = 0
 			Config.thirst = 0
 			SetEntityCoords(GetPlayerPed(-1), Config.DebugLocationX, Config.DebugLocationY, Config.DebugLocationZ, 0, 0, 0, 0)
-			SpawnMenu:Visible(not SpawnMenu:Visible())
+			--exports['RG_NUI']:exp_OpenSpawnMenu()
 		end
 		if not IsEntityDead(playerPed) then
 			alreadyDead2 = false

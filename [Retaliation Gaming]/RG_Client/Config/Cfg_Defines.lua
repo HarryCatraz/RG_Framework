@@ -1,4 +1,7 @@
-Config = {}  -- Master dont touch
+-- MASTER Variable DO NOT TOUCH -- 
+Config = {}
+Config.ID = ""
+Config.Name = ""
 
 -- Anti-Cheat Settings --
 Config.EnableAntiCheat = true -- Anti-Cheat Master
@@ -11,10 +14,6 @@ Config.AFKKickTime = 900 -- Seconds the player is AFK until they are kicked
 
 -- Admin Settings --
 Config.staffWhitelisting = 0 -- Sets the staff whitelisting to 0, will get overridden by the database once the player has synced their data
-
--- Init Variables --
-Config.ID = "" -- DO NOT TOUCH
-Config.Name = "" -- DO NOT TOUCH
 
 -- Threat Level Settings -- 
 Config.Threatlevel = "Green" -- Default Threat Level
@@ -98,7 +97,6 @@ Config.GunShopLocations = {
     { x  = -1117.5, y = 2698.6, z = 17.5},
     { x  = 842.4, y = -1033.4, z = 27.1}
 }
-
 Config.GunShopWeapons = {
     {title="Pistol", hash = "WEAPON_PISTOL", price=0, spawnAmmo = 30},
     {title="Combat Pistol", "WEAPON_COMBATPISTOL", price=0, spawnAmmo = 30},

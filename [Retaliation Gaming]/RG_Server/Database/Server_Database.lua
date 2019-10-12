@@ -1,7 +1,7 @@
 -- https://i.imgur.com/sTqa0r7.png
 
 RegisterServerEvent('RG_DB_SyncRequest')
-AddEventHandler("RG_DB_SyncRequest", function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob, copWhitelisting, medicWhitelisting , staffWhitelisting)
+AddEventHandler("RG_DB_SyncRequest", function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob, copWhitelisting, medicWhitelisting, staffWhitelisting)
     local _src = source
     local _id = GetPlayerIdentifiers(_src)[1]
     local _name = GetPlayerName(_src)
@@ -9,7 +9,7 @@ AddEventHandler("RG_DB_SyncRequest", function(id, name, money, bank, hunger, thi
     if (_id) then
         MySQL.Async.fetchAll("SELECT * FROM `players` WHERE `id` = @steam", {['@steam'] = _id}, function(res)
             if res[1] ~= nil then 
-                MySQL.Async.fetchAll("UPDATE players SET `id`=@steam, `name`=@name, `money`=@money, `bank`=@bank, `hunger`=@hunger, `thirst`=@thirst, `pissrelif`=@pissrelif, `shitrelif`=@shitrelif, `currentjob`=@currentjob, `copWhitelisting`=@copWhitelisting, medicWhitelisting`=@medicWhitelisting, `staffWhitelisting`=@staffWhitelisting  WHERE `id`=@steam", 
+                MySQL.Async.fetchAll("UPDATE players SET `id`=@steam, `name`=@name, `money`=@money, `bank`=@bank, `hunger`=@hunger, `thirst`=@thirst, `pissrelif`=@pissrelif, `shitrelif`=@shitrelif, `currentjob`=@currentjob, `copWhitelisting`=@copWhitelisting, `medicWhitelisting`=@medicWhitelisting, `staffWhitelisting`=@staffWhitelisting  WHERE `id`=@steam", 
                 {["@steam"] = _id, ["@name"] = _name, ["@money"] = money, ["@bank"] = bank, ["@hunger"] = hunger, ["@thirst"] = thirst, ["@pissrelif"] = pissrelif, ["@shitrelif"] = shitrelif, ["@currentjob"] = currentjob, ["copWhitelisting"] = copWhitelisting, ["medicWhitelisting"] = medicWhitelisting, ["staffWhitelisting"] = staffWhitelisting}, 
                 function(return1)
                 end)
