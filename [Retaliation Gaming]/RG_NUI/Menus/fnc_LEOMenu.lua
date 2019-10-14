@@ -13,7 +13,7 @@ function AddLEOMenu(menu)
 
     menu.OnItemSelect = function(sender, item, index)
         if item == PanicButton then
-            fnc_PanicButton()
+            RG_PanicButton()
             LEOMenu:Visible(not LEOMenu:Visible())
         end
         if item == EquipShield then

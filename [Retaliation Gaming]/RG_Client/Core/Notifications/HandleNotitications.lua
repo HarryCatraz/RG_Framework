@@ -10,3 +10,8 @@ function RG_Notify(msg)
     AddTextComponentString(msg)
     DrawNotification(true, false)
 end
+
+RegisterNetEvent('RG_ShowNotification')
+AddEventHandler('RG_ShowNotification', function(text)
+	RG_Notify(text)
+end)

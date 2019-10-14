@@ -1,4 +1,4 @@
-function fnc_PanicButton()
+function RG_PanicButton()
     local pedX, pedY, pedZ = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
     panic.blip = AddBlipForCoord(pedX, pedY, pedZ)
     SetBlipSprite(panic.blip, 103) --Target Blip

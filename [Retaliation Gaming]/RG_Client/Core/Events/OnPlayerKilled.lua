@@ -1,13 +1,7 @@
-RegisterNetEvent('RG_ShowNotification')
-AddEventHandler('RG_ShowNotification', function(text)
-	RG_Notify(text)
-end)
-
 Citizen.CreateThread(function()
-    -- main loop thing
 	alreadyDead = false
     while true do
-        Citizen.Wait(50)
+        Citizen.Wait(0)
 		local playerPed = GetPlayerPed(-1)
 		if IsEntityDead(playerPed) and not alreadyDead then
 			killer = GetPedKiller(playerPed)
@@ -39,14 +33,14 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
 		if IsEntityDead(playerPed) and not alreadyDead2 then
-			Config.bank = 0
-	 		Config.hunger = 0
-			Config.money = 0
-			Config.pissrelif = 0
-			Config.shitrelif = 0
-			Config.thirst = 0
-			SetEntityCoords(GetPlayerPed(-1), Config.DebugLocationX, Config.DebugLocationY, Config.DebugLocationZ, 0, 0, 0, 0)
-			--exports['RG_NUI']:exp_OpenSpawnMenu()
+			--Config.bank = 0
+	 		--Config.hunger = 0
+			--Config.money = 0
+			--Config.pissrelif = 0
+			--Config.shitrelif = 0
+			--Config.thirst = 0
+			--SetEntityCoords(playerped, Config.DebugLocationX, Config.DebugLocationY, Config.DebugLocationZ, 0, 0, 0, 0)
+			-- Open Spawn Menu
 		end
 		if not IsEntityDead(playerPed) then
 			alreadyDead2 = false

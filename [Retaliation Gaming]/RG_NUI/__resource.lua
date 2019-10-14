@@ -7,13 +7,13 @@ client_scripts{
 
   '@mysql-async/lib/MySQL.lua',
 
-  '@RG_Client/Config/Cfg_Defines.lua',
+  '@RG_Client/Config/Config_Master.lua',
 
-  'Menus/fnc_MenuExports.lua',
+  'Menus/MenuExports.lua',
 
-  'Menus/fnc_GunShop.lua',
-  'Menus/fnc_LEOMenu.lua',
-  'Menus/fnc_SpawnSelection.lua'
+  'Menus/GunShop.lua',
+  'Menus/LEOMenu.lua',
+  'Menus/SpawnSelection.lua'
 }
 
 dependency {
@@ -23,7 +23,5 @@ dependency {
 }
 
 exports {
-  'exp_OpenLEOMenu',
-  'exp_OpenSpawnMenu',
-  'exp_OpenGunShopMenu'
+  'exp_OpenMenu'
 }

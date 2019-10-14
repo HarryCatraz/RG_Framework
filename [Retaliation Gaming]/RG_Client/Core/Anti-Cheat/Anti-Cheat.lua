@@ -35,12 +35,3 @@ Citizen.CreateThread(function()
         end
     end
 end)
-
-Citizen.CreateThread(function()
-    while true do
-        Citizen.Wait(0)
-        if (IsControlJustPressed(1, 46)) then
-            RG_CreateEvidence(GetPlayerPed(-1), "An Alpha Male", "Test")
-        end
-    end
-end)

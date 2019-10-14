@@ -1,4 +1,4 @@
-AddEventHandler('playerSpawned', function()
+AddEventHandler('onClientResourceStart', function (resourceName)
     SetPedComponentVariation(GetPlayerPed(-1), 0, 0, 0, 2) -- Random Face
     SetPedComponentVariation(GetPlayerPed(-1), 2, 11, 4, 2) -- Random Hair
 end)
@@ -6,9 +6,11 @@ end)
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
-        SetPlayerWantedLevel(GetPlayerPed(-1), 0, false)
-        SetPlayerWantedLevelNow(GetPlayerPed(-1), false)
         if Config.EnableDispatch then
+            for i = 1, 15 do
+                EnableDispatchService(i, true)
+            end
+        else
             for i = 1, 15 do
                 EnableDispatchService(i, false)
             end
@@ -18,11 +20,9 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(Config.syncDelay * 1000)
-        if NetworkIsSessionStarted() then
-            TriggerServerEvent('RG_DB_SyncRequest')
-            return
-        end
+        Citizen.Wait(0)
+        SetPlayerWantedLevel(GetPlayerPed(-1), 0, false)
+        SetPlayerWantedLevelNow(GetPlayerPed(-1), false)
     end
 end)
 
@@ -30,8 +30,17 @@ Citizen.CreateThread(function()
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SelectRequest')
         Wait(1000)
-        exports['RG_NUI']:exp_OpenSpawnMenu()
+        -- Open Spawn Menu
         return
+    end
+end)
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(Config.syncDelay * 1000)
+        if NetworkIsSessionStarted() then
+            TriggerServerEvent('RG_DB_SyncRequest')
+        end
     end
 end)
 

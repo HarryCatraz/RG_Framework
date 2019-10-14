@@ -101,7 +101,7 @@ Config.GunShopWeapons = {
     {title="Pistol", hash = "WEAPON_PISTOL", price=0, spawnAmmo = 30},
     {title="Combat Pistol", "WEAPON_COMBATPISTOL", price=0, spawnAmmo = 30},
     {title="SNS Pistol", "WEAPON_SNSPISTOL", price=0, spawnAmmo = 30},
-    {title="Heavy Pistol", "WEAPON_HEAVYPISTOL", price=0, spawnAmmo = 30},
+    {title="Heavy Pistol", "WEAPON_HEAVYPISTOL", price=0, spawnAmmo = 30}
 }
 
 -- Major Crime Settings -- 
@@ -156,7 +156,7 @@ Config.HookerLocations = {
     {x = 129.63, y = -1060.41, z = 29.19, heading = 156.4} -- Add Hooker Locations Here
 }
 Config.Hookers = {
-	{id = 1, VoiceName = "HOOKER_LEAVES_ANGRY", modelHash = "s_f_y_hooker_01"}, 
+	{id = 1, VoiceName = "HOOKER_LEAVES_ANGRY", modelHash = "s_f_y_hooker_01"}
 }
 -- Coma Settings --
 Config.ComaDuration = 5 -- Minutes A Player Can Spend In A Coma
@@ -183,5 +183,5 @@ Config.CashRegisters = {
 -- Virtual Items --
 Config.VirtualItems = {
     { name = "Weed (Plant)", buyprice = 10 , sellprice = 5 , amount = 0}, 
-    { name = "Weed (Processed)", buyprice = 10 , sellprice = 5 , amount = 0}, 
+    { name = "Weed (Processed)", buyprice = 10 , sellprice = 5 , amount = 0}
 }

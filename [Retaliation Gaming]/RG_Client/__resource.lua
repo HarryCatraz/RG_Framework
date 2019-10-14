@@ -6,80 +6,81 @@ client_scripts{
 
   '@mysql-async/lib/MySQL.lua',
 
-  '@RG_NUI/Menus/fnc_GunShop.lua',
-  '@RG_NUI/Menus/fnc_LEOMenu.lua',
-  '@RG_NUI/Menus/fnc_SpawnSelection.lua',
+  '@RG_NUI/Menus/GunShop.lua',
+  '@RG_NUI/Menus/LEOMenu.lua',
+  '@RG_NUI/Menus/SpawnSelection.lua',
 
-  'Config/Cfg_Defines.lua',
+  'Config/Config_Master.lua',
 
   'Database/Client_Database.lua',
 
-  'Functions/Actions/Crouch.lua',
-  'Functions/Actions/Surrender.lua',
+  'Core/Actions/Crouch.lua',
+  'Core/Actions/Surrender.lua',
 
-  'Functions/Anti-Cheat/fnc_Anti-Cheat.lua',
-  'Functions/Anti-Cheat/fnc_AFK-Check.lua',
+  'Core/Anti-Cheat/Anti-Cheat.lua',
+  'Core/Anti-Cheat/AFK-Check.lua',
 
-  'Functions/CarWash/fnc_CarWash.lua',
+  'Core/CarWash/CarWash.lua',
 
-  'Functions/copSystem/fnc_copMarkers.lua',
-  'Functions/copSystem/fnc_CopToggleDuty.lua',
-  'Functions/copSystem/fnc_Evidence.lua',
-  'Functions/copSystem/fnc_LEOMenu.lua',
-  'Functions/copSystem/fnc_SpeedRadar.lua',
-  'Functions/copSystem/fnc_PanicButton.lua',
-  'Functions/copSystem/fnc_PoliceShield.lua',
+  'Core/copSystem/copMarkers.lua',
+  'Core/copSystem/CopToggleDuty.lua',
+  'Core/copSystem/Evidence.lua',
+  'Core/copSystem/LEOMenu.lua',
+  'Core/copSystem/SpeedRadar.lua',
+  'Core/copSystem/PanicButton.lua',
+  'Core/copSystem/PoliceShield.lua',
 
-  'Functions/Events/fnc_OnPlayerComa.lua',
-  'Functions/Events/fnc_OnPlayerConnected.lua',
-  'Functions/Events/fnc_OnPlayerDisconnected.lua',
-  'Functions/Events/fnc_OnPlayerKilled.lua',
+  'Core/Events/OnPlayerComa.lua',
+  'Core/Events/OnPlayerConnected.lua',
+  'Core/Events/OnPlayerDisconnected.lua',
+  'Core/Events/OnPlayerKilled.lua',
 
-  'Functions/jobSystem/Security/fnc_JS_startSecurity.lua',
-  'Functions/jobSystem/Taxi/fnc_JS_startTaxi.lua',
-  'Functions/jobSystem/fnc_JS_Main.lua',
+  'Core/jobSystem/Security/JS_startSecurity.lua',
+  'Core/jobSystem/Taxi/JS_startTaxi.lua',
+  'Core/jobSystem/JS_Main.lua',
 
-  'Functions/medicSystem/fnc_MedicToggleDuty.lua',
+  'Core/medicSystem/MedicToggleDuty.lua',
 
-  'Functions/Notifications/HandleNotitications.lua',
+  'Core/Notifications/HandleNotitications.lua',
 
-  'Functions/Robberies/fnc_R_RobBank.lua',
-  'Functions/Robberies/fnc_R_RobStore.lua',
+  'Core/Robberies/R_RobBank.lua',
+  'Core/Robberies/R_RobStore.lua',
 
-  'Functions/Sports/fnc_BaseJumping.lua',
-  'Functions/Sports/fnc_BikeShop.lua',
+  'Core/Hobbies/BaseJumping.lua',
+  'Core/Hobbies/BikeShop.lua',
+  'Core/Hobbies/Hookers.lua',
 
-  'Functions/Stores/fnc_NearCashRegister.lua',
+  'Core/Stores/NearCashRegister.lua',
 
-  'Functions/ThreatLevel/fnc_ThreatLevel.lua',
+  'Core/ThreatLevel/ThreatLevel.lua',
 
-  'Functions/UI/fnc_BasicNeeds.lua',
-  'Functions/UI/fnc_PlayerNames.lua',
-  'Functions/UI/fnc_Relif.lua',
-  'Functions/UI/fnc_RPHUD.lua',
-  'Functions/UI/fnc_Speedo.lua',
-  'Functions/UI/fnc_UnderwaterHUD.lua',
-  'Functions/UI/MenuText.lua',
-  'Functions/UI/RemoveElements.lua',
+  'Core/UI/BasicNeeds.lua',
+  'Core/UI/PlayerNames.lua',
+  'Core/UI/Relif.lua',
+  'Core/UI/RPHUD.lua',
+  'Core/UI/Speedo.lua',
+  'Core/UI/UnderwaterHUD.lua',
+  'Core/UI/MenuText.lua',
+  'Core/UI/RemoveElements.lua',
+  'Core/UI/HandleMenus.lua',
 
-  'Functions/Vehicles/fnc_EmergencyLightControl.lua',
-  'Functions/Vehicles/fnc_HornLights.lua',
-  'Functions/Vehicles/fnc_NoDriveBy.lua',
-  'Functions/Vehicles/fnc_RenameVehicles.lua',
-  'Functions/Vehicles/fnc_loadVehicle.lua',
-  'Functions/Vehicles/fnc_SpawnVehicle.lua',
+  'Core/Vehicles/EmergencyLightControl.lua',
+  'Core/Vehicles/HornLights.lua',
+  'Core/Vehicles/NoDriveBy.lua',
+  'Core/Vehicles/RenameVehicles.lua',
+  'Core/Vehicles/loadVehicle.lua',
+  'Core/Vehicles/SpawnVehicle.lua',
 
-  'Functions/vehicleShops/fnc_VehicleShops.lua',
+  'Core/vehicleShops/VehicleShops.lua',
   
-  'Functions/gunShops/fnc_GiveWeapon.lua',
-  'Functions/gunShops/fnc_gunshops.lua',
+  'Core/gunShops/GiveWeapon.lua',
+  'Core/gunShops/gunshops.lua',
 
-  'Functions/Weapons/fnc_NoWeaponDrops.lua',
+  'Core/Weapons/NoWeaponDrops.lua',
 
-  'Functions/World/fnc_SetupAI.lua',
-  'Functions/World/fnc_WeatherSync.lua',
-  'Functions/World/fnc_Hookers.lua',
-  'Functions/World/MapBlips.lua'
+  'Core/World/SetupAI.lua',
+  'Core/World/WeatherSync.lua',
+  'Core/World/MapBlips.lua'
 
 }
 
@@ -135,4 +136,4 @@ dependency {
   'RG_Server',
   'RG_NUI',
   'NativeUI'
-  }
+}
