@@ -12,9 +12,4 @@ AddEventHandler("startTaxi", function()
     RG_Notify("<b>Taxi Manager: Drive around and find customers to give rides. You'll be paid hourly plus tips.</b>")
 
     Config.currentJob = "Taxi"
-
-    while (true) do
-        Wait(Config.paycheckDelay)
-        Config.bank = Config.bank + 1500
-    end
 end)

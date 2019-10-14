@@ -28,10 +28,15 @@ Config.copWhitelisting = 0 -- Default cop whitelisting, will get overridden by d
 Config.medicWhitelisting = 0 -- Default medic whitelisting, will get overridden by data once the player has synced their data
 
 -- Database Settings --
-Config.syncDelay = 300 -- 5 Minutes, How often the the players data will get sent to the database
+Config.syncDelay = 5 -- 5 Minutes, How often the the players data will get sent to the database
 
 -- Paycheck Settings --
-Config.paycheckDelay = 300 --5 Minutes, How long the player waits to get their paycheck
+Config.paycheckDelay = 5 -- 5 Minutes, How long the player waits to get their paycheck
+Config.PaycheckCop = 1000 -- Dollars
+Config.PaycheckMedic = 1000 -- Dollars
+Config.PaycheckSecurity = 1000 -- Dollars
+Config.PaycheckTaxi = 1000 -- Dollars
+Config.PaycheckCiv = 1000 -- Dollars
 
 -- Hunger and Thirst Settings --
 Config.BasicNeedsRate = 10 -- 1% every 10 seconds

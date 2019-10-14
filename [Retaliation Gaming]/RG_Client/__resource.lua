@@ -37,7 +37,7 @@ client_scripts{
 
   'Core/jobSystem/Security/JS_startSecurity.lua',
   'Core/jobSystem/Taxi/JS_startTaxi.lua',
-  'Core/jobSystem/JS_Main.lua',
+  'Core/jobSystem/JS_HandlePaychecks.lua',
 
   'Core/medicSystem/MedicToggleDuty.lua',
 

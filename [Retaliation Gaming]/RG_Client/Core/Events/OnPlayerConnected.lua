@@ -1,4 +1,4 @@
-AddEventHandler('onClientResourceStart', function (resourceName)
+AddEventHandler('playerSpawned', function()
     SetPedComponentVariation(GetPlayerPed(-1), 0, 0, 0, 2) -- Random Face
     SetPedComponentVariation(GetPlayerPed(-1), 2, 11, 4, 2) -- Random Hair
 end)
@@ -37,7 +37,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(Config.syncDelay * 1000)
+        Citizen.Wait(Config.syncDelay * 60000)
         if NetworkIsSessionStarted() then
             TriggerServerEvent('RG_DB_SyncRequest')
         end
