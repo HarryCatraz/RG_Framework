@@ -1,4 +1,4 @@
-function RG_Notify("done",type, msg)
+function RG_Notify(type, msg)
 	if type == "done" then
 		showDoneNotif(msg)
     elseif type == "warn" then

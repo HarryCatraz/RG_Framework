@@ -1,5 +1,5 @@
 _menuPool = NativeUI.CreatePool()
-CopGarageMenu = NativeUI.CreateMenu("Police Vehicles", "~s~Purchase A Police Vehicle", "", "", "shopui_title_exec_vechupgrade", "shopui_title_exec_vechupgrade")
+CopGarageMenu = NativeUI.CreateMenu("Police Vehicles", "~s~Purchase A Police Vehicle")
 _menuPool:Add(CopGarageMenu)
 
 _menuPool:ControlDisablingEnabled(false)

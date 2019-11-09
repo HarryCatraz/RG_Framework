@@ -1,5 +1,5 @@
 _menuPool = NativeUI.CreatePool()
-GunMenu = NativeUI.CreateMenu("Gun Shop", "~s~Purchase A Firearm", "", "", "shopui_title_exec_vechupgrade", "shopui_title_exec_vechupgrade")
+GunMenu = NativeUI.CreateMenu("Gun Shop", "~s~Purchase A Firearm")
 _menuPool:Add(GunMenu)
 
 _menuPool:ControlDisablingEnabled(false)

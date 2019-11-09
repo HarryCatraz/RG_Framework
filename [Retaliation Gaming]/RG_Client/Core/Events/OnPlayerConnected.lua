@@ -2,8 +2,7 @@ AddEventHandler('playerSpawned', function()
     local ped = GetPlayerPed(-1)
     SetPedComponentVariation(ped, 0, 0, 0, 2) -- Random Face
     SetPedComponentVariation(ped, 2, 11, 4, 2) -- Random Hair
-    RG_Notify("done","Welcome to Retaliation Gaming")
-    RG_Notify("done","Please Set Up Your Player Appearance On The 'M' menu before teleporting!")
+    RG_Notify("done","Welcome to Retaliation Gaming. Please Set Up Your Player Appearance On The 'M' menu before teleporting!")
     TriggerEvent("RG_NUI::OpenMenu", "SpawnMenu")
 end)
 

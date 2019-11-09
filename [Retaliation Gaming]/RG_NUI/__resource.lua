@@ -5,20 +5,16 @@ description 'Retaliation Gaming NUI Framework'
 client_scripts{  
   '@NativeUI/NativeUI.lua',
 
-  '@mysql-async/lib/MySQL.lua',
-
   '@RG_Client/Config/Config_Master.lua',
 
   'Menus/MenuExports.lua',
-
   'Menus/GunShop.lua',
   'Menus/LEOMenu.lua',
   'Menus/SpawnSelection.lua',
   'Menus/CopGarageMenu.lua'
+
 }
 
 dependency {
-  'RG_Client',
-  'NativeUI',
-  'RG_Server'
+  'RG_Client'
 }

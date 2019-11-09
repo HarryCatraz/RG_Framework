@@ -1,5 +1,5 @@
 _menuPool = NativeUI.CreatePool()
-SpawnMenu = NativeUI.CreateMenu("Spawn Menu", "~s~Select Your Spawn", "", "", "shopui_title_exec_vechupgrade", "shopui_title_exec_vechupgrade")
+SpawnMenu = NativeUI.CreateMenu("Spawn Menu", "~s~Select Your Spawn")
 _menuPool:Add(SpawnMenu)
 
 _menuPool:ControlDisablingEnabled(false)
