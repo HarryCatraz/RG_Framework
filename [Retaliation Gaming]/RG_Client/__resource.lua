@@ -29,6 +29,7 @@ client_scripts{
   'Core/copSystem/SpeedRadar.lua',
   'Core/copSystem/PanicButton.lua',
   'Core/copSystem/PoliceShield.lua',
+  'Core/copSystem/CopGarages.lua',
 
   'Core/Events/OnPlayerComa.lua',
   'Core/Events/OnPlayerConnected.lua',
@@ -62,7 +63,6 @@ client_scripts{
   'Core/UI/UnderwaterHUD.lua',
   'Core/UI/MenuText.lua',
   'Core/UI/RemoveElements.lua',
-  'Core/UI/HandleMenus.lua',
 
   'Core/Vehicles/EmergencyLightControl.lua',
   'Core/Vehicles/HornLights.lua',
@@ -127,7 +127,12 @@ files{
     'LoadingScreen/songs/Radio_GaGa.mp3',
     'LoadingScreen/songs/Tuyo.mp3',
     'LoadingScreen/songs/White_Lines.mp3',
-    'LoadingScreen/index.html'
+    'LoadingScreen/index.html',
+
+    'core/Notifications/index.html',
+    'core/Notifications/hotsnackbar.css',
+    'core/Notifications/hotsnackbar.js'
+
 }
 
 loadscreen 'LoadingScreen/index.html'
@@ -137,3 +142,5 @@ dependency {
   'RG_NUI',
   'NativeUI'
 }
+
+ui_page 'core/Notifications/index.html'

@@ -13,15 +13,12 @@ client_scripts{
 
   'Menus/GunShop.lua',
   'Menus/LEOMenu.lua',
-  'Menus/SpawnSelection.lua'
+  'Menus/SpawnSelection.lua',
+  'Menus/CopGarageMenu.lua'
 }
 
 dependency {
   'RG_Client',
   'NativeUI',
   'RG_Server'
-}
-
-exports {
-  'exp_OpenMenu'
 }

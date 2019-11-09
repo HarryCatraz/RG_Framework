@@ -1,6 +1,10 @@
 AddEventHandler('playerSpawned', function()
-    SetPedComponentVariation(GetPlayerPed(-1), 0, 0, 0, 2) -- Random Face
-    SetPedComponentVariation(GetPlayerPed(-1), 2, 11, 4, 2) -- Random Hair
+    local ped = GetPlayerPed(-1)
+    SetPedComponentVariation(ped, 0, 0, 0, 2) -- Random Face
+    SetPedComponentVariation(ped, 2, 11, 4, 2) -- Random Hair
+    RG_Notify("done","Welcome to Retaliation Gaming")
+    RG_Notify("done","Please Set Up Your Player Appearance On The 'M' menu before teleporting!")
+    TriggerEvent("RG_NUI::OpenMenu", "SpawnMenu")
 end)
 
 Citizen.CreateThread(function()
@@ -19,18 +23,17 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
+    local ped = GetPlayerPed(-1)
     while true do
         Citizen.Wait(0)
-        SetPlayerWantedLevel(GetPlayerPed(-1), 0, false)
-        SetPlayerWantedLevelNow(GetPlayerPed(-1), false)
+        SetPlayerWantedLevel(ped, 0, false)
+        SetPlayerWantedLevelNow(ped, false)
     end
 end)
 
 Citizen.CreateThread(function()
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SelectRequest')
-        Wait(1000)
-        -- Open Spawn Menu
         return
     end
 end)

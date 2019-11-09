@@ -35,13 +35,13 @@ Citizen.CreateThread(function ()
 					DrawSpecialText("Press [~g~ENTER~s~] to clean your vehicle!")
 					if(IsControlJustPressed(0, Key)) then
 						if Config.money < 50 then
-							RG_Notify("You dont have enough money to get your car washed!")
+							RG_Notify("done","You dont have enough money to get your car washed!")
 						else
 							Config.money = Config.money - 50
 							local vehDirt = GetVehicleDirtLevel(GetVehiclePedIsIn(GetPlayerPed(-1),false))
 							SetVehicleDirtLevel(GetVehiclePedIsIn(GetPlayerPed(-1),false), 0.0)
 							SetVehicleUndriveable(GetVehiclePedIsIn(GetPlayerPed(-1),false), false)
-							RG_Notify("Your cars been washed!")
+							RG_Notify("done","Your cars been washed!")
 						end
 					end
 				end

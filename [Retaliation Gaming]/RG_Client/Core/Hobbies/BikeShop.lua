@@ -43,12 +43,12 @@ Citizen.CreateThread(function()
                 if IsControlJustPressed(0,51) and IsPedOnFoot(playerPed) then
                     Citizen.Wait(100)  
                     if Config.money < 100 then
-                        RG_Notify("You dont have enough money to hire a bike!")
+                        RG_Notify("done","You dont have enough money to hire a bike!")
                     else
                         RG_LoadVehicleModel("tribike")
                         Config.money = Config.money - 100
                         RG_SpawnVehicle("tribike")
-                        RG_Notify("You hired a bike for $100")
+                        RG_Notify("done","You hired a bike for $100")
                     end
                 end
             end

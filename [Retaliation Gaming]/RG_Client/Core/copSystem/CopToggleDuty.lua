@@ -15,10 +15,10 @@ Citizen.CreateThread(function()
 
                         DrawMarker(27, Config.PoliceStations[i].x, Config.PoliceStations[i].y, Config.PoliceStations[i].z-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0, 125, 125, 255, 0.0, 0.0, 2, false, false, false, false)
 
-                        RG_Notify("Press ~b~E~w~ To Go On Duty")
+                        RG_Notify("done","Press ~b~E~w~ To Go On Duty")
 
                         if IsControlJustPressed(0, 38) then
-                            RG_Notify("You have gone off duty")
+                            RG_Notify("done","You have gone off duty")
                             Config.currentJob = "Cop"
                         end
                     end
@@ -32,10 +32,10 @@ Citizen.CreateThread(function()
 
                     DrawMarker(27, Config.PoliceStations[i].x, Config.PoliceStations[i].y, Config.PoliceStations[i].z-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 125, 0, 125, 255, 0.0, 0.0, 2, false, false, false, false)
 
-                    RG_Notify("Press ~b~E~w~ To Go Off Duty")
+                    RG_Notify("done","Press ~b~E~w~ To Go Off Duty")
 
                     if IsControlJustPressed(0, 38) then
-                        RG_Notify("You have gone off duty")
+                        RG_Notify("done","You have gone off duty")
                         Config.currentJob = "Unemployed"
                     end
                 end

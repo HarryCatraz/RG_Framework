@@ -167,7 +167,6 @@ AddEventHandler('onClientGameTypeStart', function()
     CreateThread(function()
         while true do
             Wait(250)
-
             updatePositions()
         end
     end)

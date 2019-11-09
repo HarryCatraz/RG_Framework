@@ -13,7 +13,7 @@ Citizen.CreateThread(function()
         
                     DrawMarker(27, Config.GunShopLocations[i].x, Config.GunShopLocations[i].y, Config.GunShopLocations[i].z-0.99, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 125, 0, 99, 99, 0.0, 0.0, 2, false, false, false, false)
         
-                    RG_Notify("Press ~b~E~w~ To Enter The Gun Shop")
+                    RG_Notify("done","Press ~b~E~w~ To Enter The Gun Shop")
         
                     if IsControlJustPressed(0, 38) then
                         GunMenu:Visible(not GunMenu:Visible())

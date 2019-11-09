@@ -36,6 +36,6 @@ function RG_DestroyEvidence(prop)
 end
 
 function RG_GatherEvidence(prop)
-    --RG_Notify("Evidence - Victim: " .. victim .. " Suspect: " .. suspect .. " Crime: " .. crime)
+    --RG_Notify("done","Evidence - Victim: " .. victim .. " Suspect: " .. suspect .. " Crime: " .. crime)
     RG_DestroyEvidence(prop)
 end

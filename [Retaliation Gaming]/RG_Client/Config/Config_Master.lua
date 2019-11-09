@@ -104,9 +104,9 @@ Config.GunShopLocations = {
 }
 Config.GunShopWeapons = {
     {title="Pistol", hash = "WEAPON_PISTOL", price=0, spawnAmmo = 30},
-    {title="Combat Pistol", "WEAPON_COMBATPISTOL", price=0, spawnAmmo = 30},
-    {title="SNS Pistol", "WEAPON_SNSPISTOL", price=0, spawnAmmo = 30},
-    {title="Heavy Pistol", "WEAPON_HEAVYPISTOL", price=0, spawnAmmo = 30}
+    {title="Combat Pistol", hash =  "WEAPON_COMBATPISTOL", price=0, spawnAmmo = 30},
+    {title="SNS Pistol", hash =  "WEAPON_SNSPISTOL", price=0, spawnAmmo = 30},
+    {title="Heavy Pistol", hash =  "WEAPON_HEAVYPISTOL", price=0, spawnAmmo = 30}
 }
 
 -- Major Crime Settings -- 
@@ -189,4 +189,37 @@ Config.CashRegisters = {
 Config.VirtualItems = {
     { name = "Weed (Plant)", buyprice = 10 , sellprice = 5 , amount = 0}, 
     { name = "Weed (Processed)", buyprice = 10 , sellprice = 5 , amount = 0}
+}
+
+-- Cop Vehicle Settings -- 
+Config.CopGarageLocations = {
+    { x  = -462.78, y = 6040.34, z = 31.34, h = 160.0},
+    { x  = 1871.78, y = 3692.87, z = 33.57, h = 208.0},
+    { x  = 536.81, y = -38.76, z = 70.74, h = 225.0},
+    { x  = -1330.9, y = -840.65, z = 13.72, h = 128.0},
+    { x  = 388.84, y = -1621.44, z = 29.29, h = 321.0},
+    { x  = 830.82, y = -1265.01, z = 26.28, h = 86.0},
+    { x  = 449.61, y = -1018.49, z = 28.53, h = 88.75},
+    { x  = -557.64, y = -145.48, z = 38.17, h = 109.0},
+    { x  = 372.43, y = 787.96, z = 186.93, h = 168.0}
+}
+
+Config.CopGarageVehicles = {
+    {title="Dodge Charger (LSPD)", hash = "NorthLSPD-Charger"},
+    {title="Ford CVPI (LSPD)", hash =  "NorthLSPD-CVPI"},
+    {title="Ford FPI (LSPD)", hash =  "NorthLSPD-FPI"},
+    {title="Helicopter (LSPD)", hash = "NorthLSPD-Heli"},
+    {title="Chevrolet Tahoe (LSPD)", hash = "NorthLSPD-Tahoe"},
+
+    {title="Dodge Charger (SASP)", hash =  "SASP-Charger"},
+    {title="Ford CVPI (SASP)", hash =  "SASP-CVPI"},
+    {title="Ford FPI (SASP)", hash =  "SASP-FPI"},
+    {title="Helicopter (SASP)", hash =  "SASP-Heli"},
+    {title="Chevrolet Tahoe (SASP)", hash =  "SASP-Tahoe"},
+
+    {title="Dodge Charger (Sheriff)", hash =  "Sheriff-Charger"},
+    {title="Ford CVPI (Sheriff)", hash =  "Sheriff-CVPI"},
+    {title="Ford FPI (Sheriff)", hash =  "Sheriff-FPI"},
+    {title="Helicopter (Sheriff)", hash =  "Sheriff-Heli"},
+    {title="Chevrolet Tahoe (Sheriff)", hash =  "Sheriff-Tahoe"}
 }

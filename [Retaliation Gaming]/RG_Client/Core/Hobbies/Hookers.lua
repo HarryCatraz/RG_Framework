@@ -45,13 +45,13 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 	    if CurrentLocation ~= nil then
-			RG_Notify('Press ~b~~h~E~h~~w~ to honk at a hooker')
+			RG_Notify("done",'Press ~b~~h~E~h~~w~ to honk at a hooker')
 			if IsControlJustPressed(0,51) then
 			    TaskEnterVehicle(SpawnedPed, GetVehiclePedIsIn(playerPed, false), -1, 0, 1.0, 1, 0)
 				Citizen.Wait(5000)
-				RG_Notify("Hey sweetie, what would you like? A blowjob or something better?")
+				RG_Notify("done","Hey sweetie, what would you like? A blowjob or something better?")
 				Citizen.Wait(1000)
-				RG_Notify("Type /bj for a blowjob, /sex for sex or /getout to let the hooker leave.")
+				RG_Notify("done","Type /bj for a blowjob, /sex for sex or /getout to let the hooker leave.")
 			end
 		end
 	end
