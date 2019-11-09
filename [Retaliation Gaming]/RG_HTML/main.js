@@ -1,6 +1,6 @@
-display = false
-tick = 0
-Wait = (ms) => new Promise(resolve =>  setTimeout(resolve, ms))
+display = false;
+tick = 0;
+Wait = (ms) => new Promise(resolve =>  setTimeout(resolve, ms));
 
 
 // this will run every 1s
@@ -9,38 +9,54 @@ Wait = (ms) => new Promise(resolve =>  setTimeout(resolve, ms))
     //emitNet("js:chat", tick++)
 //})
 
-setTick(async () => {
-    updateHUD()
-})
-
-function updateHUD() {
-
-    var playerName = GetPlayerName(PlayerId());
-    var playerJob = Config.currentJob;
-    var hunger = GetEntityHealth(GetPlayerPed(-1));
-    var thirst = GetEntityHealth(GetPlayerPed(-1));
-    var stamina = GetPlayerSprintStaminaRemaining(GetPlayerPed(-1));
-    var health = GetEntityHealth(GetPlayerPed(-1));
-    var hasweapon, ammoInMags = GetAmmoInClip(GetPlayerPed(-1), GetSelectedPedWeapon(GetPlayerPed(-1)));
-    var amountOfMags = GetAmmoInPedWeapon(GetPlayerPed(-1), GetSelectedPedWeapon(GetPlayerPed(-1)));
-    var fireMode = GetEntityHealth(GetPlayerPed(-1)) - 100;
-
-    document.getElementById("playerName").innerHTML = playerName;
-    document.getElementById("playerJob").innerHTML = playerJob;
-    document.getElementById("hunger%").innerHTML = hunger;
-    document.getElementById("thirst%").innerHTML = thirst;
-    document.getElementById("stamina%").innerHTML = stamina;
-    document.getElementById("health%").innerHTML = toString(health);
-    document.getElementById("ammoInMags").innerHTML = ammoInMags;
-    document.getElementById("amountOfMags").innerHTML = amountOfMags;
-    document.getElementById("fireMode").innerHTML = fireMode;
-}
+function updateHUD(playerName, playerJob, hunger, thirst, stamina, health, ammoInMags, amountOfMags, fireMode) {
+    $(".playerName").text(playerName);
+    $(".playerJob").text(playerJob);
+    $(".hunger%").text(hunger);
+    $(".thirst%").text(thirst);
+    $(".stamina%").text(stamina);
+    $(".health").text(health);
+    $(".ammoInMags").text(ammoInMags);
+    $(".amountOfMags").text(amountOfMags);
+    $(".fireMode").text(fireMode);
+};
 
 on('playerSpawned', function() {
     setImmediate(() => {
-        TriggerEvent('nui:on', true)
-    })
-})
+        TriggerEvent('nui:on', true);
+
+        playerName = GetPlayerName(PlayerId());
+        playerJob = "TEMPLATE";
+        hunger = "TEMPLATE";
+        thirst = "TEMPLATE";
+        stamina = GetPlayerSprintStaminaRemaining(GetPlayerPed(-1));
+        health = GetEntityHealth(GetPlayerPed(-1));
+        hasweapon, ammoInMags = GetAmmoInClip(GetPlayerPed(-1), GetSelectedPedWeapon(GetPlayerPed(-1)));
+        amountOfMags = GetAmmoInPedWeapon(GetPlayerPed(-1), GetSelectedPedWeapon(GetPlayerPed(-1)));
+        fireMode = "SEMI";
+
+        updateHUD(playerName, playerJob, hunger, thirst, stamina, health, ammoInMags, amountOfMags, fireMode);
+
+        // this will run every 1s
+        setTick(async () => {
+            await Wait(1000) // Milliseconds
+            // Update Certain HUD Values (job, hunger, thirst, stamina, health, ammoInMags, amountOfMags, fireMode)
+
+            playerJob = "TEMPLATE";
+            hunger = "TEMPLATE";
+            thirst = "TEMPLATE";
+            stamina = GetPlayerSprintStaminaRemaining(GetPlayerPed(-1));
+            health = GetEntityHealth(GetPlayerPed(-1));
+            hasweapon, ammoInMags = GetAmmoInClip(GetPlayerPed(-1), GetSelectedPedWeapon(GetPlayerPed(-1)));
+            amountOfMags = GetAmmoInPedWeapon(GetPlayerPed(-1), GetSelectedPedWeapon(GetPlayerPed(-1)));
+            fireMode = "SEMI";           
+
+            updateHUD(playerName, playerJob, hunger, thirst, stamina, health, ammoInMags, amountOfMags, fireMode);
+
+        });
+
+    });
+});
 
 RegisterNetEvent('nui:on');
 on('nui:on', function() {
@@ -48,7 +64,7 @@ on('nui:on', function() {
         type = "ui",
         display = true
     });
-})
+});
 
 RegisterNetEvent('nui:off');
 on('nui:off', function() {
@@ -56,4 +72,4 @@ on('nui:off', function() {
         type = "ui",
         display = false
     });
-})
+});

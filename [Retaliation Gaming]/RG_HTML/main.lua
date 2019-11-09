@@ -1,35 +1,14 @@
-local display = false
-
-AddEventHandler('playerSpawned', function()
+--[[ AddEventHandler('playerSpawned', function()
   Citizen.CreateThread(function()
-    TriggerEvent('nui:on', true)
-  end)
-end)
 
---[[
-RegisterCommand("on", function()
-    Citizen.CreateThread(function()
-      TriggerEvent('nui:on', true)
-    end)
-end)
-RegisterCommand("off", function()
-  Citizen.CreateThread(function()
-      TriggerEvent("nui:off", true)
+    local _playername = GetPlayerName(PlayerPedId())
+    local _playerJob = Config.currentJob
+
+    SendNUIMessage({
+      type = "ui",
+      playerName = _playername,
+      playerJob = _playerJob
+    })
+    
   end)
 end) ]]
-
-RegisterNetEvent('nui:on')
-AddEventHandler('nui:on', function()
-  SendNUIMessage({
-    type = "ui",
-    display = true
-  })
-end)
-
-RegisterNetEvent('nui:off')
-AddEventHandler('nui:off', function()
-  SendNUIMessage({
-    type = "ui",
-    display = false
-  })
-end)
