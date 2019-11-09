@@ -8,6 +8,11 @@ client_scripts {
 } 
 
 files {
+    'html/img/food.png',
+    'html/img/water.png',
+    'html/img/health.png',
+    'html/img/stamina.png',
+
     'html/index.html',
     'html/style.css',
     'html/reset.css',
