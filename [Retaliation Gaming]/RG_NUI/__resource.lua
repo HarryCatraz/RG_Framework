@@ -11,7 +11,8 @@ client_scripts{
   'Menus/GunShop.lua',
   'Menus/LEOMenu.lua',
   'Menus/SpawnSelection.lua',
-  'Menus/CopGarageMenu.lua'
+  'Menus/CopGarageMenu.lua',
+  'Menus/fnc_JevaMenu.lua'
 
 }
 
