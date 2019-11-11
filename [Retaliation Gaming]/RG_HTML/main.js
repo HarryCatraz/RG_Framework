@@ -11,11 +11,9 @@ Wait = (ms) => new Promise(resolve =>  setTimeout(resolve, ms));
 
 on('playerSpawned', function() {
 
-        await Wait(0)
-
         TriggerEvent('nui:on', true);
 
-        const ped = GetPlayerPed(-1);
+        let ped = GetPlayerPed(-1);
         const pedid = GetPlayerName(PlayerId())
 
         // this will run every 1s
