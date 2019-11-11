@@ -6,7 +6,13 @@ client_scripts{
 
   '@mysql-async/lib/MySQL.lua',
 
+  'Config/Config_Anti-Cheat.lua',
+  'Config/Config_Cop.lua',
+  'Config/Config_Database.lua',
+  'Config/Config_Defines.lua',
+  'Config/Config_Economy.lua',
   'Config/Config_Master.lua',
+  'Config/Config_Medic.lua',
 
   'Database/Client_Database.lua',
 
@@ -26,6 +32,8 @@ client_scripts{
   'Core/copSystem/PanicButton.lua',
   'Core/copSystem/PoliceShield.lua',
   'Core/copSystem/CopGarages.lua',
+  'Core/copSystem/CopWeapons.lua',
+  'Core/copSystem/CopUniforms.lua',
 
   'Core/Events/OnPlayerComa.lua',
   'Core/Events/OnPlayerConnected.lua',
@@ -73,6 +81,7 @@ client_scripts{
   'Core/gunShops/gunshops.lua',
 
   'Core/Weapons/NoWeaponDrops.lua',
+  'Core/Weapons/GiveWeapon.lua',
 
   'Core/World/SetupAI.lua',
   'Core/World/WeatherSync.lua',
@@ -136,7 +145,8 @@ loadscreen 'LoadingScreen/index.html'
 dependency {
   'RG_Server',
   'RG_NUI',
-  'NativeUI'
+  'NativeUI',
+  'skinchanger'
 }
 
 ui_page 'core/Notifications/index.html'

@@ -11,5 +11,9 @@ AddEventHandler('RG_NUI:OpenMenu', function(menu)
     end
     if passedMenu == 'RG_Menu_CopGarage' then
 		CopGarageMenu:Visible(not CopGarageMenu:Visible())
-    end
+	end
+	if passedMenu == 'RG_Menu_CopWeapons' then
+		-- Needs Changing
+		CopWeaponsMenu:Visible(not CopWeaponsMenu:Visible())
+	end
 end)
