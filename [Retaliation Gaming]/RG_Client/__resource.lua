@@ -6,10 +6,6 @@ client_scripts{
 
   '@mysql-async/lib/MySQL.lua',
 
-  '@RG_NUI/Menus/GunShop.lua',
-  '@RG_NUI/Menus/LEOMenu.lua',
-  '@RG_NUI/Menus/SpawnSelection.lua',
-
   'Config/Config_Master.lua',
 
   'Database/Client_Database.lua',

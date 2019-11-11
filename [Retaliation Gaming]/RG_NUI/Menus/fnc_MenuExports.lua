@@ -1,14 +1,15 @@
-RegisterNetEvent("RG_NUI::OpenMenu")
-AddEventHandler("RG_NUI::OpenMenu", function(menu)
-    if menu == "SpawnMenu" then
-        SpawnMenu:Visible(not SpawnMenu:Visible())
-    elseif menu == "LEOMenu" then
-        LEOMenu:Visible(not LEOMenu:Visible())
-    elseif menu == "GunShopMenu" then
-        GunMenu:Visible(not GunMenu:Visible())
-    elseif menu == "CopGarage" then
-        CopGarageMenu:Visible(not CopGarageMenu:Visible())
-    else
-        print("Menu Not Found")
+AddEventHandler('RG_NUI:OpenMenu', function(menu)
+    local passedMenu = menu
+	if passedMenu == 'RG_Menu_Spawn' then
+		SpawnMenu:Visible(not SpawnMenu:Visible())
+	end
+	if passedMenu == 'RG_Menu_LEO' then
+		LEOMenu:Visible(not LEOMenu:Visible())
+    end
+	if passedMenu == 'RG_Menu_GunShop' then
+		GunMenu:Visible(not GunMenu:Visible())
+    end
+    if passedMenu == 'RG_Menu_CopGarage' then
+		CopGarageMenu:Visible(not CopGarageMenu:Visible())
     end
 end)
