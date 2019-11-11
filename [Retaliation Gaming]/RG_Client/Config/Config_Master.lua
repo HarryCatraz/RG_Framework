@@ -1,3 +1,5 @@
+Config = {}
+
 -- Threat Level Settings -- 
 Config.Threatlevel = "Green" -- Default Threat Level
 

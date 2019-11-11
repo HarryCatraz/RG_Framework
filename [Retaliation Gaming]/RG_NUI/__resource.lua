@@ -6,14 +6,12 @@ client_scripts{
   
   '@NativeUI/NativeUI.lua',
 
-  '@RG_Client/Config/Config_Master.lua',
-
   'Menus/MenuExports.lua',
-  'Menus/GunShop.lua',
-  'Menus/LEOMenu.lua',
-  'Menus/SpawnSelection.lua',
-  'Menus/CopGarageMenu.lua',
-  'Menus/fnc_JevaMenu.lua'
+  'Menus/Diag_Civ_SpawnSelection.lua',
+  'Menus/Diag_Civ_WeaponsMenu.lua',
+  'Menus/Diag_Cop_GarageMenu.lua',
+  'Menus/Diag_Cop_WeaponsMenu.lua',
+  'Menus/Diag_Cop_Interaction.lua'
 
 }
 

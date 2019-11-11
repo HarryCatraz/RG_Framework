@@ -1,3 +1,5 @@
+Config = {}
+
 -- Anti-Cheat Settings --
 Config.EnableAntiCheat = true -- Anti-Cheat Master
 Config.CheckGodMode = true -- Should the Anti Cheat check GodMod?

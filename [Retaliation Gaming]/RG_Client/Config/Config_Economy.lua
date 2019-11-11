@@ -1,3 +1,5 @@
+Config = {}
+
 -- Job Settings --
 Config.currentJob = "Unemployed" -- Default job, will get overridden by data once the player has synced their data
 

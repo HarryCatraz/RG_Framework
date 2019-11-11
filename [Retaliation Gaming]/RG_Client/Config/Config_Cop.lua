@@ -1,3 +1,5 @@
+Config = {}
+
 -- Cop System Settings --
 Config.PoliceStations = {
 	{ x = 447.24, y = -975.55, z = 30.69}, -- Mission Row Captains Office

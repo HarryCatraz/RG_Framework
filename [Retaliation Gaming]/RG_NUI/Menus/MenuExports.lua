@@ -1,19 +1,18 @@
 AddEventHandler('RG_NUI:OpenMenu', function(menu)
     local passedMenu = menu
-	if passedMenu == 'RG_Menu_Spawn' then
+	if passedMenu == 'Diag_Civ_SpawnSelection' then
 		SpawnMenu:Visible(not SpawnMenu:Visible())
 	end
-	if passedMenu == 'RG_Menu_LEO' then
+	if passedMenu == 'Diag_Cop_Interaction' then
 		LEOMenu:Visible(not LEOMenu:Visible())
     end
-	if passedMenu == 'RG_Menu_GunShop' then
+	if passedMenu == 'Diag_Civ_WeaponsMenu' then
 		GunMenu:Visible(not GunMenu:Visible())
     end
-    if passedMenu == 'RG_Menu_CopGarage' then
+    if passedMenu == 'Diag_Cop_GarageMenu' then
 		CopGarageMenu:Visible(not CopGarageMenu:Visible())
 	end
-	if passedMenu == 'RG_Menu_CopWeapons' then
-		-- Needs Changing
+	if passedMenu == 'Diag_Cop_WeaponsMenu' then
 		CopWeaponsMenu:Visible(not CopWeaponsMenu:Visible())
 	end
 end)

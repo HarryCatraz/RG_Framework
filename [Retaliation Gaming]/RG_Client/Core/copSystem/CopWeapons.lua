@@ -15,7 +15,7 @@ Citizen.CreateThread(function()
                     RG_Notify("done","Press ~b~E~w~ To Open The Cop Weapon Locker")
 
                     if IsControlJustPressed(0, 38) then
-                        TriggerEvent("RG_NUI:OpenMenu", "RG_Menu_CopWeapons")
+                        TriggerEvent("RG_NUI:OpenMenu", "Diag_Cop_WeaponsMenu")
                     end
                 end
             end

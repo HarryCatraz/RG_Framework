@@ -32,7 +32,7 @@ end)
 Citizen.CreateThread(function()
     if NetworkIsSessionStarted() then
         TriggerServerEvent('RG_DB_SelectRequest')
-        TriggerEvent("RG_NUI:OpenMenu", "RG_Menu_Spawn")
+        TriggerEvent("RG_NUI:OpenMenu", "Diag_Civ_SpawnSelection")
         return
     end
 end)

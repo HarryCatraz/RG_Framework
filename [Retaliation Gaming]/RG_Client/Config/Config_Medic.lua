@@ -1,3 +1,5 @@
+Config = {}
+
 -- Medic System Settings --
 Config.Hospitals = {
 	{ x = 342.53, y = -1397.81, z = 32.51}, -- Strawberry
