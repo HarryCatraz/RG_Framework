@@ -1,5 +1,3 @@
--- https://i.imgur.com/sTqa0r7.png
-
 RegisterNetEvent('RG_Client_SelectRequest')
 AddEventHandler('RG_Client_SelectRequest', function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob, copWhitelisting, medicWhitelisting, staffWhitelisting)
     Config.ID = id

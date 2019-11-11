@@ -6,13 +6,7 @@ client_scripts{
 
   '@mysql-async/lib/MySQL.lua',
 
-  'Config/Config_Anti-Cheat.lua',
-  'Config/Config_Cop.lua',
-  'Config/Config_Database.lua',
-  'Config/Config_Defines.lua',
-  'Config/Config_Economy.lua',
   'Config/Config_Master.lua',
-  'Config/Config_Medic.lua',
 
   'Database/Client_Database.lua',
 

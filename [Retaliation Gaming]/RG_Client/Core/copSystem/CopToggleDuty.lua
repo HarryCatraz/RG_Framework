@@ -1,6 +1,3 @@
--- https://i.imgur.com/b95jbgV.png
--- https://i.imgur.com/BZ5Mrz0.png
-
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)

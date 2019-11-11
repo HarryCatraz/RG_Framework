@@ -1,5 +1,3 @@
--- https://i.imgur.com/sTqa0r7.png
-
 RegisterServerEvent('RG_DB_SyncRequest')
 AddEventHandler("RG_DB_SyncRequest", function(id, name, money, bank, hunger, thirst, pissrelif, shitrelif, currentjob, copWhitelisting, medicWhitelisting, staffWhitelisting)
     local _src = source
