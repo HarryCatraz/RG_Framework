@@ -77,8 +77,7 @@ client_scripts{
 
   'Core/vehicleShops/VehicleShops.lua',
   
-  'Core/gunShops/GiveWeapon.lua',
-  'Core/gunShops/gunshops.lua',
+  'Core/gunShops/Gunshops.lua',
 
   'Core/Weapons/NoWeaponDrops.lua',
   'Core/Weapons/GiveWeapon.lua',

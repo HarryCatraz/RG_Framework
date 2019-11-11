@@ -25,11 +25,8 @@ Citizen.CreateThread(function()
                             DrawNotification(true, false)
                             if IsControlJustReleased(0, 38) then
                                 if skin.sex == 0 then
-                                    local clothesSkin = {
-                                        ['tshirt_1'] = 57,    
-                                        ['tshirt_2'] = 0
-                                    }
-                                    TriggerEvent('skinchanger:loadClothes', skin, clothesSkin)
+                                   -- Change to previous loadout (Look at ESX)
+                                   -- TriggerEvent('skinchanger:loadClothes', skin, Config.Loadout)
                                 end
                             end
                         end
