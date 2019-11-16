@@ -61,6 +61,7 @@ client_scripts{
   'Core/UI/UnderwaterHUD.lua',
   'Core/UI/MenuText.lua',
   'Core/UI/RemoveElements.lua',
+  'Core/UI/ProgressBars.lua',
 
   'Core/Vehicles/EmergencyLightControl.lua',
   'Core/Vehicles/HornLights.lua',
@@ -129,7 +130,9 @@ files{
 
     'core/Notifications/index.html',
     'core/Notifications/hotsnackbar.css',
-    'core/Notifications/hotsnackbar.js'
+    'core/Notifications/hotsnackbar.js',
+
+    'core/UI/ProgressBar.html'
 
 }
 
@@ -143,3 +146,4 @@ dependency {
 }
 
 ui_page 'core/Notifications/index.html'
+ui_page 'Core/UI/ProgressBar.html'
