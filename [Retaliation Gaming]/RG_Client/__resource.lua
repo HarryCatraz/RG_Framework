@@ -61,7 +61,7 @@ client_scripts{
   'Core/UI/UnderwaterHUD.lua',
   'Core/UI/MenuText.lua',
   'Core/UI/RemoveElements.lua',
-  'Core/UI/ProgressBars.lua',
+  --'Core/UI/ProgressBars.lua',
 
   'Core/Vehicles/EmergencyLightControl.lua',
   'Core/Vehicles/HornLights.lua',
@@ -132,7 +132,7 @@ files{
     'core/Notifications/hotsnackbar.css',
     'core/Notifications/hotsnackbar.js',
 
-    'core/UI/ProgressBar.html'
+    --'core/UI/ProgressBar.html'
 
 }
 
@@ -145,5 +145,5 @@ dependency {
   'skinchanger'
 }
 
-ui_page 'core/Notifications/index.html'
-ui_page 'Core/UI/ProgressBar.html'
+ui_page 'Core/Notifications/index.html'
+--ui_page 'Core/UI/ProgressBar.html'

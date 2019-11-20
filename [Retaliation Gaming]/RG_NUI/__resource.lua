@@ -6,6 +6,8 @@ client_scripts{
   
   '@NativeUI/NativeUI.lua',
 
+  '@RG_Client/Config/Config_Master.lua',
+
   'Menus/MenuExports.lua',
   'Menus/Diag_Civ_SpawnSelection.lua',
   'Menus/Diag_Civ_WeaponsMenu.lua',

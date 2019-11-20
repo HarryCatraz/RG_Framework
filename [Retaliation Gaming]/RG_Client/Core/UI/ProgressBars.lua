@@ -3,7 +3,7 @@ function RG_ProgressBar(time, text)
     local newtime = time * 1000
 
 	SendNUIMessage({
-		type = "ProgressBarUI",
+		type = "ui",
 		display = true,
 		time = newtime,
 		text = text

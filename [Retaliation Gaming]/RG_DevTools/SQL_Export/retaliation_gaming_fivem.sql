@@ -28,13 +28,16 @@ CREATE TABLE IF NOT EXISTS `players` (
   `shitrelif` int(11) NOT NULL DEFAULT '0',
   `currentjob` varchar(255) NOT NULL DEFAULT 'Unemployed',
   `copWhitelisting` int(1) NOT NULL DEFAULT '0',
-  `staffWhitelisting` int(1) NOT NULL DEFAULT '0'
+  `medicWhitelisting` int(1) NOT NULL DEFAULT '0',
+  `staffWhitelisting` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Dumping data for table retaliation_gaming_fivem.players: ~1 rows (approximately)
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
-INSERT INTO `players` (`id`, `name`, `money`, `bank`, `hunger`, `thirst`, `pissrelif`, `shitrelif`, `currentjob`, `copWhitelisting`, `staffWhitelisting`) VALUES
-	('steam:1100001099953cc', 'Harry Catraz', 0, 0, 0, 0, 0, 0, '', 0, 0);
+INSERT INTO `players` (`id`, `name`, `money`, `bank`, `hunger`, `thirst`, `pissrelif`, `shitrelif`, `currentjob`, `copWhitelisting`, `medicWhitelisting`, `staffWhitelisting`) VALUES
+	('steam:1100001099953cc', 'Harry Catraz', 0, 0, 0, 0, 0, 0, '', 0, 0, 0);
 /*!40000 ALTER TABLE `players` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

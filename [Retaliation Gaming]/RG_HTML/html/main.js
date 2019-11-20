@@ -13,22 +13,22 @@ on('playerSpawned', function() {
 
         TriggerEvent('nui:on', true);
 
-        let ped = GetPlayerPed(-1);
-        const pedid = GetPlayerName(PlayerId())
+        var ped = GetPlayerPed(-1);
+        var pedid = GetPlayerName(PlayerId());
 
         // this will run every 1s
         setTick(async () => {
-            await Wait(1000)
+            await Wait(1000);
 
-            playerName = GetPlayerName(pedid)
-            playerJob = "TEMPLATE";
-            hunger = "TEMPLATE";
-            thirst = "TEMPLATE";
-            stamina = GetPlayerSprintStaminaRemaining(ped);
-            health = GetEntityHealth(ped);
-            hasweapon, ammoInMags = GetAmmoInClip(ped, GetSelectedPedWeapon(ped));
-            amountOfMags = GetAmmoInPedWeapon(ped, GetSelectedPedWeapon(ped));
-            fireMode = "SEMI";           
+            var playerName = GetPlayerName(pedid);
+            var playerJob = "TEMPLATE";
+            var hunger = "TEMPLATE";
+            var thirst = "TEMPLATE";
+            var stamina = GetPlayerSprintStaminaRemaining(ped);
+            var health = GetEntityHealth(ped);
+            var ammoInMags = GetAmmoInClip(ped, GetSelectedPedWeapon(ped));
+            var amountOfMags = GetAmmoInPedWeapon(ped, GetSelectedPedWeapon(ped));
+            var fireMode = "SEMI";           
 
             $("playerName").text(playerName);
             $("playerJob").text(playerJob);
