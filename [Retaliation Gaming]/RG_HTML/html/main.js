@@ -1,5 +1,5 @@
-display = false;
-tick = 0;
+var display = false;
+var tick = 0;
 Wait = (ms) => new Promise(resolve =>  setTimeout(resolve, ms));
 
 
@@ -30,15 +30,15 @@ on('playerSpawned', function() {
             amountOfMags = GetAmmoInPedWeapon(ped, GetSelectedPedWeapon(ped));
             fireMode = "SEMI";           
 
-            document.getElementById("playerName").innerHTML = playerName;
-            document.getElementById("playerJob").innerHTML = playerJob;
-            document.getElementById("hunger%").innerHTML = hunger;
-            document.getElementById("thirst%").innerHTML = thirst;
-            document.getElementById("stamina%").innerHTML = stamina;
-            document.getElementById("health").innerHTML = health;
-            document.getElementById("ammoInMags").innerHTML = ammoInMags;
-            document.getElementById("amountOfMags").innerHTML = amountOfMags;
-            document.getElementById("fireMode").innerHTML = fireMode;
+            $("playerName").text(playerName);
+            $("playerJob").text(playerJob);
+            $("hunger%").text(hunger);
+            $("thirst%").text(thirst);
+            $("stamina%").text(stamina);
+            $("health").text(health);
+            $("ammoInMags").text(ammoInMags);
+            $("amountOfMags").text(amountOfMags);
+            $("fireMode").text(fireMode);
 
         });
 });
