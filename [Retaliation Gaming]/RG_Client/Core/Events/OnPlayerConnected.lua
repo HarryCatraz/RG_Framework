@@ -2,7 +2,7 @@ AddEventHandler('playerSpawned', function()
     local ped = GetPlayerPed(-1)
     SetPedComponentVariation(ped, 0, 0, 0, 2) -- Random Face
     SetPedComponentVariation(ped, 2, 11, 4, 2) -- Random Hair
-    RG_ProgressBar(30, "Initialising Player Information") -- Progress bar for 30 seconds
+    --RG_ProgressBar(30, "Initialising Player Information") -- Progress bar for 30 seconds
     Wait(5000)
     RG_Notify("done","Welcome to Retaliation Gaming. Please Set Up Your Player Appearance On The 'M' menu before teleporting!")
 end)

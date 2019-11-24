@@ -1,8 +1,6 @@
 local shieldActive = false
 local shieldEntity = nil
 local hadPistol = false
-
--- ANIM
 local animDict = "combat@gestures@gang@pistol_1h@beckon"
 local animName = "0"
 local prop = "prop_ballistic_shield"

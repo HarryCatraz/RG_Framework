@@ -1,5 +1,6 @@
-local playercoords = GetEntityCoords(GetPlayerPed(-1))
 Citizen.CreateThread(function()
+    local ped = GetPlayerPed(-1)
+    local playercoords = GetEntityCoords(ped)
     while true do
     Citizen.Wait(0)
         if Config.EnableAntiCheat then
@@ -13,11 +14,11 @@ Citizen.CreateThread(function()
                 end
             end
             if Config.CheckMaxHealth then
-                SetEntityMaxHealth(GetPlayerPed(-1), 200)
+                SetEntityMaxHealth(ped, 200)
             end
             if Config.CheckInvisible then
                 if Config.staffWhitelisting ~= 1 then
-                    if(not IsEntityVisible(GetPlayerPed(-1))) then
+                    if(not IsEntityVisible(ped)) then
                         TriggerServerEvent("RG_Server_Kick")
                     end
                 end
@@ -30,7 +31,7 @@ Citizen.CreateThread(function()
                 end
             end
             if Config.CheckUnlimitedAmmo then
-                SetPedInfiniteAmmoClip(GetPlayerPed(-1), 0)
+                SetPedInfiniteAmmoClip(ped, 0)
             end
         end
     end

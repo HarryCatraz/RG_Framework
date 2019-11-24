@@ -8,11 +8,12 @@ function textTargetSpeed(content)
 end
 
 Citizen.CreateThread(function()
+    local ped = GetPlayerPed(-1)
     while true do
         Citizen.Wait(0)
-        if(IsPedInAnyVehicle(GetPlayerPed(-1), false)) then
-            if (GetVehicleClass(GetVehiclePedIsUsing(GetPlayerPed(-1))) == 18) then
-                local pos = GetEntityCoords(GetPlayerPed(-1))
+        if(IsPedInAnyVehicle(ped, false)) then
+            if (GetVehicleClass(GetVehiclePedIsUsing(ped)) == 18) then
+                local pos = GetEntityCoords(ped)
                 local carM = GetClosestVehicle(pos['x'], pos['y'], pos['z'], 50.0,0,70)
                 local TargetSpeedMph= GetEntitySpeed(carM)*2.236936
                 textTargetSpeed(math.floor(TargetSpeedMph))

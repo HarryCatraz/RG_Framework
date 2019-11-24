@@ -1,9 +1,8 @@
 Citizen.CreateThread(function()
+    local playerped = GetPlayerPed(-1)
+    local playerCoords =  GetEntityCoords(playerped, true)
     while true do
         Citizen.Wait(0)
-        local playerped = GetPlayerPed(-1)
-        local playerCoords =  GetEntityCoords(playerped, true)
-
         if Config.currentJob == "Cop" then
             for i = 1, #Config.CopGarageLocations do
 

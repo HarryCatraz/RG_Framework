@@ -29,6 +29,10 @@ client_scripts{
   'Core/copSystem/CopWeapons.lua',
   'Core/copSystem/CopUniforms.lua',
 
+  'Core/Drugs/DrugFarms.lua',
+  'Core/Drugs/DrugProcessing.lua',
+  'Core/Drugs/DrugDealers.lua',
+
   'Core/Events/OnPlayerComa.lua',
   'Core/Events/OnPlayerConnected.lua',
   'Core/Events/OnPlayerDisconnected.lua',
@@ -44,6 +48,10 @@ client_scripts{
 
   'Core/Robberies/R_RobBank.lua',
   'Core/Robberies/R_RobStore.lua',
+
+  'Core/Session/Inventory_Client.lua',
+  'Core/Session/Inventory_Functions.lua',
+  'Core/Session/Inventory_GUI.lua',
 
   'Core/Hobbies/BaseJumping.lua',
   'Core/Hobbies/BikeShop.lua',

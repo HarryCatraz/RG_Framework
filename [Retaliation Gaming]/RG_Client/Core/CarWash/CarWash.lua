@@ -25,22 +25,23 @@ function DrawSpecialText(m_text, showtime)
 end
 
 Citizen.CreateThread(function ()
+	local ped = GetPlayerPed(-1)
 	while true do
 		Citizen.Wait(0)
-		if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then 
+		if IsPedSittingInAnyVehicle(ped) then 
 			for i = 1, #vehicleWashStation do
 				garageCoords2 = vehicleWashStation[i]
 				DrawMarker(1, garageCoords2[1], garageCoords2[2], garageCoords2[3], 0, 0, 0, 0, 0, 0, 5.0, 5.0, 2.0, 0, 157, 0, 155, 0, 0, 2, 0, 0, 0, 0)
-				if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(-1)), garageCoords2[1], garageCoords2[2], garageCoords2[3], true ) < 5 then
+				if GetDistanceBetweenCoords(GetEntityCoords(ped), garageCoords2[1], garageCoords2[2], garageCoords2[3], true ) < 5 then
 					DrawSpecialText("Press [~g~ENTER~s~] to clean your vehicle!")
 					if(IsControlJustPressed(0, Key)) then
 						if Config.money < 50 then
 							RG_Notify("done","You dont have enough money to get your car washed!")
 						else
 							Config.money = Config.money - 50
-							local vehDirt = GetVehicleDirtLevel(GetVehiclePedIsIn(GetPlayerPed(-1),false))
-							SetVehicleDirtLevel(GetVehiclePedIsIn(GetPlayerPed(-1),false), 0.0)
-							SetVehicleUndriveable(GetVehiclePedIsIn(GetPlayerPed(-1),false), false)
+							local vehDirt = GetVehicleDirtLevel(GetVehiclePedIsIn(ped,false))
+							SetVehicleDirtLevel(GetVehiclePedIsIn(ped,false), 0.0)
+							SetVehicleUndriveable(GetVehiclePedIsIn(ped,false), false)
 							RG_Notify("done","Your cars been washed!")
 						end
 					end

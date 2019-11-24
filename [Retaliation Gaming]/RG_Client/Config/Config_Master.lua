@@ -228,3 +228,20 @@ Config.CheckHealthRegen = true -- Should the Anti Cheat check the players health
 Config.CheckUnlimitedAmmo = true -- Should the Anti Cheat check check to see if the player has unlimited ammo
 Config.CheckInvisible = true -- Should the Anti Cheat check if the player is invisible
 Config.AFKKickTime = 900 -- Seconds the player is AFK until they are kicked
+
+-- Drug Settings --
+Config.DrugFieldLocations = {
+    { x = 447.24, y = -975.55, z = 30.69, type = "weed"},
+    { x = 447.24, y = -975.55, z = 30.69, type = "opium"},
+    { x = 447.24, y = -975.55, z = 30.69, type = "cocaine"}
+}
+Config.DrugProcessingLocations = {
+    { x = 447.24, y = -975.55, z = 30.69, type = "weed"},
+    { x = 447.24, y = -975.55, z = 30.69, type = "opium"},
+    { x = 447.24, y = -975.55, z = 30.69, type = "cocaine"}
+}
+Config.DrugDealerLocations = {
+    { x = 447.24, y = -975.55, z = 30.69, type = "weed"},
+    { x = 447.24, y = -975.55, z = 30.69, type = "opium"},
+    { x = 447.24, y = -975.55, z = 30.69, type = "cocaine"}
+}

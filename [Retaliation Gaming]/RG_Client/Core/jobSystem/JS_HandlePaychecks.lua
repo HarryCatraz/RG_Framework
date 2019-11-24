@@ -16,5 +16,6 @@ Citizen.CreateThread(function()
         if Config.currentJob == "Unemployed" then
             Config.bank = Config.bank + Config.PaycheckCiv
         end
+        RG_Notify("done", "You've Received Your Paycheck!")
     end
 end)

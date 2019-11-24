@@ -1,9 +1,9 @@
 kickWarning = true
 Citizen.CreateThread(function()
+	local playerPed = GetPlayerPed(-1)
 	while true do
 		Citizen.Wait(0)
 		Wait(1000)
-		playerPed = GetPlayerPed(-1)
 		if playerPed then
 			currentPos = GetEntityCoords(playerPed, true)
 			if currentPos == prevPos then

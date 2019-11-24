@@ -12,6 +12,8 @@ server_scripts{
   'Functions/Events/svr_fnc_OnPlayerConnecting.lua',
   'Functions/Events/svr_fnc_OnPlayerKilled.lua',
 
+  'Functions/Session/Inventory_Server.lua',
+
   'Functions/ThreatLevel/svr_fnc_ThreatLevel.lua',
 
   'Functions/World/svr_fnc_WeatherSync.lua',

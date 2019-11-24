@@ -10,12 +10,14 @@ Citizen.CreateThread(function()
                 if Config.currentJob ~= "Cop" then
                     DrawSpecialText("Press [~g~E~s~] to destroy evidence")
                     if IsControlJustPressed(0, 38) then
-                        RG_DestroyEvidence(prop)
+                        G_Notify("done","You've Destroyed The Evidence")
+                        DeleteObject(prop)
                     end
                 else
                     DrawSpecialText("Press [~g~E~s~] to gather evidence")
                     if IsControlJustPressed(0, 38) then
-                        RG_GatherEvidence(prop)
+                        G_Notify("done","You've Gathered The Evidence")
+                        DeleteObject(prop)
                     end
                 end
             end
@@ -24,18 +26,9 @@ Citizen.CreateThread(function()
 end)
 
 function RG_CreateEvidence(victim, suspect, crime)
-    local victimCoords = GetEntityCoords(victim, false)
-    local prop = CreateObject(GetHashKey(Config.EvidenceModel), victimCoords.x, victimCoords.y, victimCoords.z, 1, true, true)
+    victimCoords = GetEntityCoords(victim, false)
+    prop = CreateObject(GetHashKey(Config.EvidenceModel), victimCoords.x, victimCoords.y, victimCoords.z, 1, true, true)
     PlaceObjectOnGroundProperly(prop)
     Citizen.Wait(Config.EvidenceDeleteDelay * 60000)
-    RG_DestroyEvidence(prop)
-end
-
-function RG_DestroyEvidence(prop)
-    DeleteObject(prop)
-end
-
-function RG_GatherEvidence(prop)
-    --RG_Notify("done","Evidence - Victim: " .. victim .. " Suspect: " .. suspect .. " Crime: " .. crime)
     RG_DestroyEvidence(prop)
 end
