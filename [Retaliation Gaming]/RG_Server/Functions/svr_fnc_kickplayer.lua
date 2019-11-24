@@ -1,4 +1,4 @@
 RegisterServerEvent("RG_Server_Kick")
 AddEventHandler("RG_Server_Kick", function(source)
-	DropPlayer(source, "Retaliation Gaming: You've Been Kicked By The Server")
+	--DropPlayer(source, "Retaliation Gaming: You've Been Kicked By The Server")
 end)

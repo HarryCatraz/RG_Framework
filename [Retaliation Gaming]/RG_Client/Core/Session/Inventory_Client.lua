@@ -1,8 +1,8 @@
 ITEMS = {}
 NewItems = {}
-local playerdead = false
-local maxCapacity = 64
-local refreshTime = 60000
+playerdead = false
+maxCapacity = 64
+refreshTime = 60000
 
 -- register events, only needs to be done once
 RegisterNetEvent("RG_Inventory:reset")

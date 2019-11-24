@@ -1,5 +1,3 @@
-require "resources/mysql-async/lib/MySQL"
-
 RegisterServerEvent("RG_Inventory:getItems")
 RegisterServerEvent("RG_Inventory:updateQuantity")
 RegisterServerEvent("RG_Inventory:setItem")

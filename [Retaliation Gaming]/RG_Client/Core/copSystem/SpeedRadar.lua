@@ -8,8 +8,8 @@ function textTargetSpeed(content)
 end
 
 Citizen.CreateThread(function()
-    local ped = GetPlayerPed(-1)
     while true do
+        local ped = GetPlayerPed(-1)
         Citizen.Wait(0)
         if(IsPedInAnyVehicle(ped, false)) then
             if (GetVehicleClass(GetVehiclePedIsUsing(ped)) == 18) then

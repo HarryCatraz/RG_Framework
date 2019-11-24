@@ -1,8 +1,8 @@
 Citizen.CreateThread(function()
-    local ped = GetPlayerPed(-1)
-    local playercoords = GetEntityCoords(ped)
     while true do
     Citizen.Wait(0)
+    local ped = GetPlayerPed(-1)
+    local playercoords = GetEntityCoords(ped)
         if Config.EnableAntiCheat then
             if Config.CheckGodMode then
                 if Config.IsInComa == false then
