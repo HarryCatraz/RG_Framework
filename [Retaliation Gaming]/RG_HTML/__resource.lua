@@ -16,6 +16,9 @@ files {
     'html/img/health.png',
     'html/img/stamina.png',
 
+    'html/img/fuel_icon.png',
+    'html/img/range_icon.png',
+
     'html/index.html',
     'html/style.css',
     'html/reset.css',

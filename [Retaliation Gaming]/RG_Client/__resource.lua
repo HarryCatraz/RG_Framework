@@ -77,6 +77,7 @@ client_scripts{
   'Core/Vehicles/RenameVehicles.lua',
   'Core/Vehicles/loadVehicle.lua',
   'Core/Vehicles/SpawnVehicle.lua',
+  'Core/Vehicles/SeatBelts.lua',
 
   'Core/vehicleShops/VehicleShops.lua',
   

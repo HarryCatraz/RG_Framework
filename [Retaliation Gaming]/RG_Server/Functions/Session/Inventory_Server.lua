@@ -14,7 +14,6 @@ AddEventHandler("RG_Inventory:getItems", function()
     local _src = source
     local _id = GetPlayerIdentifiers(_src)[1]
     local _name = GetPlayerName(_src)
-    -- for i = 0, 23 do
         MySQL.Async.fetchAll("SELECT * FROM player_inventory JOIN items ON `player_inventory`.`item_id` = `items`.`id` WHERE id = @username",
         {['@username'] = _name },
         function(qItems)
@@ -24,16 +23,16 @@ AddEventHandler("RG_Inventory:getItems", function()
                     table.insert(items, tonumber(item.item_id), t)
                 end
             end
-            TriggerClientEvent("gui:getItems", source, items)
+            TriggerClientEvent("RG_Inventory:getItems", source, items)
         end)
-    -- end
 end)
 
 AddEventHandler("RG_Inventory:setItem", function(item, quantity)
     local _src = source
     local _id = GetPlayerIdentifiers(_src)[1]
     local _name = GetPlayerName(_src)
-    MySQL.Async.execute("INSERT INTO player_inventory (`id`, `item_id`, `quantity`) VALUES (@player, @item, @qty)",
+    --MySQL.Async.execute("INSERT INTO player_inventory (`id`, `item_id`, `quantity`) VALUES (@player, @item, @qty)",
+    MySQL.Async.fetchAll("INSERT INTO player_inventory (`id`, `item_id`, `quantity`) VALUES (@player, @item, @qty)",
         {['@player'] = _name, ['@item'] = item, ['@qty'] = quantity },
         function(rowsChanged)
             print(rowsChanged)
@@ -44,15 +43,24 @@ AddEventHandler("RG_Inventory:updateQuantity", function(qty, id)
     local _src = source
     local _id = GetPlayerIdentifiers(_src)[1]
     local _name = GetPlayerName(_src)
-    MySQL.Async.execute("UPDATE player_inventory SET `quantity` = @qty WHERE `id` = @username AND `item_id` = @id",
-    { ['@username'] = _name, ['@qty'] = tonumber(qty), ['@id'] = tonumber(id) })
+    --MySQL.Async.execute("UPDATE player_inventory SET `quantity` = @qty WHERE `id` = @username AND `item_id` = @id",
+    MySQL.Async.fetchAll("UPDATE player_inventory SET `quantity` = @qty WHERE `id` = @username AND `item_id` = @id",
+        { ['@username'] = _name, ['@qty'] = tonumber(qty), ['@id'] = tonumber(id) },
+        function(one)
+            print(one)
+        end)
 end)
 
 AddEventHandler("RG_Inventory:reset", function()
     local _src = source
     local _id = GetPlayerIdentifiers(_src)[1]
     local _name = GetPlayerName(_src)
-    MySQL.Async.execute("UPDATE player_inventory SET `quantity` = @qty WHERE `id` = @username", { ['@username'] = _name, ['@qty'] = 0 })
+    --MySQL.Async.execute("UPDATE player_inventory SET `quantity` = @qty WHERE `id` = @username", { ['@username'] = _name, ['@qty'] = 0 },
+    MySQL.Async.fetchAll("UPDATE player_inventory SET `quantity` = @qty WHERE `id` = @username", 
+        { ['@username'] = _name, ['@qty'] = 0 },
+        function(two)
+            print(two)
+        end)
 end)
 
 AddEventHandler("RG_Inventory:sell", function(id, qty, price)
@@ -63,12 +71,27 @@ AddEventHandler("RG_Inventory:giveItem", function(item, name, qty, target)
     local _src = source
     local _id = GetPlayerIdentifiers(_src)[1]
     local _name = GetPlayerName(_src)
-    local total = MySQL.Sync.fetchScalar("SELECT SUM(quantity) as total FROM player_inventory WHERE id = '@username'", { ['@username'] = _name })
+
+    MySQL.Async.fetchAll("SELECT SUM(quantity) as total FROM player_inventory WHERE id = '@username'",  
+    { ['@username'] = _name },
+        function(total)
+            if (total + qty <= 64) then
+                TriggerClientEvent("RG_Inventory:looseItem", source, item, qty)
+                TriggerClientEvent("RG_Inventory:receiveItem", target, item, qty)
+            end
+        end)  
+end)
+
+--[[AddEventHandler("RG_Inventory:giveItem", function(item, name, qty, target)
+    local _src = source
+    local _id = GetPlayerIdentifiers(_src)[1]
+    local _name = GetPlayerName(_src)
+    local total = MySQL.Sync.fetchScalar("SELECT SUM(quantity) as total FROM player_inventory WHERE id = '@username'", { ['@username'] = _name },function(three)print(three)end)
     if (total + qty <= 64) then
         TriggerClientEvent("RG_Inventory:looseItem", source, item, qty)
         TriggerClientEvent("RG_Inventory:receiveItem", target, item, qty)
     end
-end)
+end)--]]
 
 AddEventHandler("RG_Inventory:swapMoney", function(amount, target)
     -- Execute Client Event Adding Money Here

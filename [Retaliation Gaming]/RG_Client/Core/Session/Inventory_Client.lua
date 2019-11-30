@@ -1,3 +1,5 @@
+-- TriggerEvent("RG_Inventory:receiveItem",ITEM ID IN DB,5)
+
 ITEMS = {}
 NewItems = {}
 playerdead = false

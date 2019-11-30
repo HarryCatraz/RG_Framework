@@ -127,7 +127,8 @@ end
 
 function PersonnalMenu()
     ped = GetPlayerPed(-1);
-    MenuTitle="Menu :"
+    --MenuTitle="Menu :"
+    MenuTitle = tostring(GetPlayerName(GetPlayerPed(-1)))
     ClearMenu()
     Menu.addButton("Inventory", "InventoryMenu", nil)
     --Menu.addButton("Animations", "animsMenu", nil)
@@ -173,7 +174,7 @@ Citizen.CreateThread(function()
         end
 
         if IsControlJustPressed(1, 311) then
-            Menu.addButton("Inventory", "InventoryMenu", nil)
+            PersonnalMenu() -- Menu to draw
             Menu.hidden = not Menu.hidden -- Hide/Show the menu
         end
 
