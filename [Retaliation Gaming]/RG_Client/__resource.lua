@@ -38,6 +38,11 @@ client_scripts{
   'Core/Events/OnPlayerDisconnected.lua',
   'Core/Events/OnPlayerKilled.lua',
 
+  'Core/Events/Festive/Event_Christmas.lua',
+  'Core/Events/Festive/Event_Halloween.lua',
+  'Core/Events/Festive/Event_IndependenceDay.lua',
+  'Core/Events/Festive/Event_ThanksGiving.lua',
+
   'Core/jobSystem/Security/JS_startSecurity.lua',
   'Core/jobSystem/Taxi/JS_startTaxi.lua',
   'Core/jobSystem/JS_HandlePaychecks.lua',

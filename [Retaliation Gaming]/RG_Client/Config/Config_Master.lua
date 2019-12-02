@@ -207,6 +207,12 @@ Config.CopWeaponsLocations = {
     -- Add Co-ords here
     --{ x  = 372.43, y = 787.96, z = 186.93, h = 168.0}
 }
+Config.CopWeapons = {
+    {title="Pistol", hash = "WEAPON_PISTOL", price=0, spawnAmmo = 30},
+    {title="Combat Pistol", hash =  "WEAPON_COMBATPISTOL", price=0, spawnAmmo = 30},
+    {title="SNS Pistol", hash =  "WEAPON_SNSPISTOL", price=0, spawnAmmo = 30},
+    {title="Heavy Pistol", hash =  "WEAPON_HEAVYPISTOL", price=0, spawnAmmo = 30}
+}
 Config.EvidenceModel = "prop_drug_package"
 Config.EvidenceDeleteDelay = 15 -- Deletes evidence 15 Minutes after spawning
 Config.CopUniformLocations = {
@@ -245,3 +251,9 @@ Config.DrugDealerLocations = {
     { x = 447.24, y = -975.55, z = 30.69, type = "opium"},
     { x = 447.24, y = -975.55, z = 30.69, type = "cocaine"}
 }
+
+-- Festive Event Settings --
+Config.ChristmasEvent = true
+Config.HalloweenEvent = true
+Config.IndependenceDayEvent = true
+Config.ThanksGivingEvent = true

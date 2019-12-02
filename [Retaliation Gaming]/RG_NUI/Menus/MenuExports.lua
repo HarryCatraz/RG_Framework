@@ -1,4 +1,5 @@
-AddEventHandler('RG_NUI:OpenMenu', function(menu)
+RegisterNetEvent("RG_NUI:OpenMenu")
+AddEventHandler("RG_NUI:OpenMenu", function(menu)
     local passedMenu = menu
 	if passedMenu == 'Diag_Civ_SpawnSelection' then
 		SpawnMenu:Visible(not SpawnMenu:Visible())

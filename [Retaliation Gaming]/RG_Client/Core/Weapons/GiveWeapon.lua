@@ -1,8 +1,7 @@
-function RG_SpawnVehicle(weapon, ammo)
+function RG_GiveWeapon(weapon, ammo)
     local ped = GetPlayerPed(-1)
     local weaponHash = GetHashKey(weapon)
     local ammoCount = ammo
-    CreateVehicle(vehiclehash, x, y, z, GetEntityHeading(PlayerPedId())+90, 1, 0)
     GiveWeaponToPed(ped, weaponHash, ammoCount, 1, 0)
 end
 
