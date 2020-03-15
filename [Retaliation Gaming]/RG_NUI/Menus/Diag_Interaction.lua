@@ -1,5 +1,5 @@
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("Interaction Menu", "~b~Prism RP DoJ Interaction Menu")
+mainMenu = NativeUI.CreateMenu("Interaction Menu", "~b~By Retaliation Gaming")
 _menuPool:Add(mainMenu)
 
 function CivilianInteractionMenu(menu) 
@@ -43,7 +43,7 @@ function PoliceInteractionMenu(menu)
 	submenu.OnListSelect = function(sender, item, index)  
 		if item == policevehicleslist then
 			local selectedPoliceVehicle = item:IndexToItem(index)
-			PrismRP_DoJ_SpawnVehicle(selectedPoliceVehicle)
+			RG_SpawnVehicle(selectedPoliceVehicle)
 		end
 	end
 
@@ -62,7 +62,7 @@ function PoliceInteractionMenu(menu)
 	PoliceWeaponItem.Activated = function(sender, item)
 		if item == PoliceWeaponItem then
 			for i,_ in Config.PoliceWeapons do
-				PrismRP_DoJ_SpawnWeapon(i)
+				RG_SpawnWeapon(i)
 			end
 		end
 	end
@@ -126,7 +126,7 @@ function EMSInteractionMenu(menu)
 	submenu.OnListSelect = function(sender, item, index)  
 		if item == EMSvehicleslist then
 			local selectedEMSVehicle = item:IndexToItem(index)
-			PrismRP_DoJ_SpawnVehicle(selectedEMSVehicle)
+			RG_SpawnVehicle(selectedEMSVehicle)
 		end
 	end
 

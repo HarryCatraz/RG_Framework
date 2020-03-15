@@ -1,4 +1,4 @@
-function PrismRP_DoJ_SpawnVehicle(selectedEMSVehicle)
+function RG_SpawnVehicle(selectedEMSVehicle)
 	local x,y,z = table.unpack(GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0.0, 8.0, 0.5))
     local vehiclehash = GetHashKey(selectedEMSVehicle)
     RequestModel(vehiclehash)
@@ -9,11 +9,11 @@ function PrismRP_DoJ_SpawnVehicle(selectedEMSVehicle)
     CreateVehicle(vehiclehash, x, y, z, GetEntityHeading(PlayerPedId())+90, 1, 0)
 end
 
-function PrismRP_DoJ_SpawnWeapon(i)
+function RG_SpawnWeapon(i)
 	GiveWeaponToPed(GetPlayerPed(-1), GetHashKey(i), 150, false, false)
 end
 
-function PrismRP_DoJ_Handcuff(closestplayer)
+function RG_Handcuff(closestplayer)
 	local ped = PlayerPedId(closestplayer)
     RequestAnimDict(dict)
     while not HasAnimDictLoaded(dict) do
@@ -43,31 +43,31 @@ function PrismRP_DoJ_Handcuff(closestplayer)
     changed = true
 end
 
-function PrismRP_DoJ_Escort(bool)
+function RG_Escort(bool)
 
 end
 
-function PrismRP_DoJ_PlaceSpikes()
+function RG_PlaceSpikes()
 
 end
 
-function PrismRP_DoJ_RemoveSpikes()
+function RG_RemoveSpikes()
 
 end
 
-function PrismRP_DoJ_PullOutOfVehicle()
+function RG_PullOutOfVehicle()
 
 end
 
-function PrismRP_DoJ_PutInVehicle()
+function RG_PutInVehicle()
 
 end
 
-function PrismRP_DoJ_CPR()
+function RG_CPR()
 
 end
 
-function PrismRP_DoJ_GetClosestPlayer()
+function RG_GetClosestPlayer()
 	local players, closestDistance, closestPlayer = PrismRP_DoJ_GetPlayers(), -1, -1
 	local coords, usePlayerPed = coords, false
 	local playerPed, playerId = PlayerPedId(), PlayerId()
@@ -91,7 +91,7 @@ function PrismRP_DoJ_GetClosestPlayer()
 	return closestPlayer, closestDistance
 end
 
-function PrismRP_DoJ_GetPlayers()
+function RG_GetPlayers()
 	local players = {}
 	for _,player in ipairs(GetActivePlayers()) do
 		local ped = GetPlayerPed(player)
