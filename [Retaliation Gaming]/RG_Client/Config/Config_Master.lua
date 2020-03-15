@@ -1,6 +1,4 @@
 Config = {}
-
-Config = {}
 Config.ID = ""
 Config.Name = ""
 

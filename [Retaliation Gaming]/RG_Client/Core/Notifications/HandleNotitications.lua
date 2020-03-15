@@ -10,7 +10,7 @@ end
 
 RegisterNetEvent('RG_ShowNotification')
 AddEventHandler('RG_ShowNotification', function(text)
-	RG_Notify("done","done",text)
+	RG_Notify("done",text)
 end)
 
 function showDoneNotif(mes)

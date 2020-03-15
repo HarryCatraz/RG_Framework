@@ -1,6 +1,6 @@
 resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
-description 'Retaliation Gaming Client Side Framework'
+description 'RG Client Side Framework'
 
 client_scripts{  
 
@@ -57,6 +57,7 @@ client_scripts{
   'Core/Session/Inventory_Client.lua',
   'Core/Session/Inventory_Functions.lua',
   'Core/Session/Inventory_GUI.lua',
+  'Core/Session/Debug_Functions.lua',
 
   'Core/Hobbies/BaseJumping.lua',
   'Core/Hobbies/BikeShop.lua',

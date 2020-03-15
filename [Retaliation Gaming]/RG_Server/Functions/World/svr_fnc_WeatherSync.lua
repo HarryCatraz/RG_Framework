@@ -1,7 +1,7 @@
 -- Created by TheStonedTurtle & modified by Dunko
 
-secondsToWait = 60000-- Seconds to wait between changing weather. 60 seconds to fully switch types
-currentWeatherString = "CLEAR"   -- Starting Weather Type.
+secondsToWait = 30000-- Seconds to wait between changing weather. 60 seconds to fully switch types
+currentWeatherString = "EXTRASUNNY"   -- Starting Weather Type.
 local SmartWeatherEnabled = true -- Should this script be enabled?
 local adminOnlyPlugin = true     -- Should chat commands be limited to the `admins` list?
 

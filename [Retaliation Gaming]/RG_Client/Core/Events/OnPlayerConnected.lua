@@ -5,6 +5,11 @@ AddEventHandler('playerSpawned', function()
     TriggerEvent("RG_Inventory:receiveItem",1,5) -- Add Weed For Testing
     Wait(5000)
     RG_Notify("done","Welcome to Retaliation Gaming. Please Set Up Your Player Appearance On The 'M' menu before teleporting!")
+
+    TriggerEvent('skinchanger:getSkin', function(skin)
+        RG_Debug(1, tostring(skin))
+    end)
+    
 end)
 
 Citizen.CreateThread(function()
