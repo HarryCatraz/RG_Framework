@@ -48,14 +48,14 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(Config.syncDelay * 60000)
         if NetworkIsSessionStarted() then
-            TriggerServerEvent('RG_DB_SyncRequest')
+            TriggerServerEvent('RG_DB_SyncFull', Config.ID, Config.Name, Config.money, Config.bank, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif, Config.currentJob, Config.copWhitelisting, Config.medicWhitelisting, Config.staffWhitelisting)
         end
     end
 end)
 
 RegisterCommand("sync", function(source) 
     if NetworkIsSessionStarted() then
-        TriggerServerEvent('RG_DB_SyncRequest', Config.ID, Config.Name, Config.money, Config.bank, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif, Config.currentJob, Config.copWhitelisting, Config.medicWhitelisting, Config.staffWhitelisting)
+        TriggerServerEvent('RG_DB_SyncFull', Config.ID, Config.Name, Config.money, Config.bank, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif, Config.currentJob, Config.copWhitelisting, Config.medicWhitelisting, Config.staffWhitelisting)
         return
     end
 end)

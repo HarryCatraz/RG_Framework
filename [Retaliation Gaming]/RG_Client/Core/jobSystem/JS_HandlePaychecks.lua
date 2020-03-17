@@ -17,5 +17,6 @@ Citizen.CreateThread(function()
             Config.bank = Config.bank + Config.PaycheckCiv
         end
         RG_Notify("done", "You've Received Your Paycheck!")
+        TriggerServerEvent('RG_DB_UpdateFinance', Config.ID, Config.money, Config.bank)
     end
 end)

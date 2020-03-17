@@ -33,17 +33,21 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
 		if IsEntityDead(playerPed) and not alreadyDead2 then
-			--Config.bank = 0
-	 		--Config.hunger = 0
-			--Config.money = 0
-			--Config.pissrelif = 0
-			--Config.shitrelif = 0
-			--Config.thirst = 0
-			--SetEntityCoords(playerped, Config.DebugLocationX, Config.DebugLocationY, Config.DebugLocationZ, 0, 0, 0, 0)
-			-- Open Spawn Menu
+			RG_ResetStats()
 		end
 		if not IsEntityDead(playerPed) then
 			alreadyDead2 = false
 		end
 	end
 end) 
+
+function RG_ResetStats()
+	Config.money = 0
+	Config.currentJob = "Unemployed"
+	Config.hunger = 0
+	Config.thirst = 0
+	Config.shitrelif = 0
+	Config.pissrelif = 0
+	TriggerServerEvent('RG_DB_UpdateStats', Config.ID, Config.hunger, Config.thirst, Config.pissrelif, Config.shitrelif)
+	TriggerServerEvent('RG_DB_UpdateFinance', Config.ID, Config.money, Config.bank)
+end
